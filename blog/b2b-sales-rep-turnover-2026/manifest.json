@@ -1,6 +1,7 @@
 [
   {
     "kind": "hero",
+    "metaphor": "people",
     "file": "hero.jpg",
     "alt": "35% of B2B sales reps leave every year: 10 reps with 3.5 shown as gone. Source: Optifai benchmark of 939 B2B companies.",
     "bytes": 70651
