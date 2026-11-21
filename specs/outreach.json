@@ -1,34 +1,105 @@
 {
  "slug": "outreach-ai-usage-growth-sales-teams-2026",
  "title": "What Outreach's 12x AI usage growth means for sales teams",
- "hero": {"metaphor": "compare", "rows": [["AI credit use, before",1],["AI credit use, H1 2026",12]], "value": "12x", "label": "AI usage growth, H1 2026",
-          "alt": "Outreach reports AI credit consumption up 12x across its customer base in the first half of 2026. Source: Outreach newsroom, 9 September 2026."},
+ "hero": {
+  "metaphor": "compare",
+  "rows": [
+   [
+    "AI credit use, before",
+    1
+   ],
+   [
+    "AI credit use, H1 2026",
+    12
+   ]
+  ],
+  "value": "12x",
+  "label": "AI usage growth, H1 2026",
+  "alt": "Outreach reports AI credit consumption up 12x across its customer base in the first half of 2026. Source: Outreach newsroom, 9 September 2026."
+ },
  "visuals": [
-  {"type": "big_stat", "after_heading": "What the numbers actually show", "meta": "Paid for when an agent acts", "value": "480%",
+  {
+   "type": "big_stat",
+   "after_heading": "What the numbers actually show",
+   "meta": "Paid for when an agent acts",
+   "value": "480%",
    "line": "year-on-year growth in Outreach's AI-linked annual recurring revenue in its fiscal second quarter",
-   "chips": ["Drafting","Sequencing","Win-back outreach"],
+   "chips": [
+    "Drafting",
+    "Sequencing",
+    "Win-back outreach"
+   ],
    "source": "Source: Outreach newsroom, 9 September 2026",
-   "alt": "Outreach's AI-linked annual recurring revenue grew 480% year-on-year in its fiscal second quarter. Source: Outreach."},
-  {"type": "people", "after_heading": "The case study that's doing the heavy lifting", "count": 4.5, "meta": "One account, one campaign",
-   "headline": "SolarWinds' win-back agent: 4.5 in 10 previously engaged buyers replied", "in_label": "Replied", "out_label": "No reply",
+   "alt": "Outreach's AI-linked annual recurring revenue grew 480% year-on-year in its fiscal second quarter. Source: Outreach."
+  },
+  {
+   "type": "people",
+   "after_heading": "The case study that's doing the heavy lifting",
+   "count": 4.5,
+   "meta": "One account, one campaign",
+   "headline": "SolarWinds' win-back agent: 4.5 in 10 previously engaged buyers replied",
+   "in_label": "Replied",
+   "out_label": "No reply",
    "source": "Source: Outreach newsroom, 9 September 2026 (SolarWinds case, 45% reply rate)",
-   "alt": "SolarWinds' win-back agent achieved a 45% reply rate with previously engaged accounts. Source: Outreach."},
-  {"type": "checklist", "after_heading": "What metered AI credits mean for the budget conversation", "meta": "Before the budget review",
+   "alt": "SolarWinds' win-back agent achieved a 45% reply rate with previously engaged accounts. Source: Outreach."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "What metered AI credits mean for the budget conversation",
+   "meta": "Before the budget review",
    "headline": "Three checks before you celebrate AI usage",
-   "items": [["Check spend, not just usage","A 12x usage jump can be a 12x line item"],["Count actions that moved a deal","Ten sends for one reply still counts as usage"],["Compare against a human baseline","Replies, meetings and pipeline reopened"]],
+   "items": [
+    [
+     "Check spend, not just usage",
+     "A 12x usage jump can be a 12x line item"
+    ],
+    [
+     "Count actions that moved a deal",
+     "Ten sends for one reply still counts as usage"
+    ],
+    [
+     "Compare against a human baseline",
+     "Replies, meetings and pipeline reopened"
+    ]
+   ],
    "cta": "More breakdowns like this: socialsprint.co/resources",
-   "alt": "Three checks for an AI budget review: spend not just usage, actions that moved a deal, and a comparison against a human baseline."},
-  {"type": "quote", "after_heading": "What this means for how a sales team actually differentiates", "andrea": true, "name": "Andrea Piras", "role": "SocialSprint",
-   "text": "A buyer who gets three AI-drafted win-back emails in a week notices the fourth one that reads like a real person wrote it.",
-   "source": "From: What Outreach's 12x AI Usage Growth Means for Sales Teams, SocialSprint",
-   "alt": "Quote from Andrea Piras: a buyer who gets three AI-drafted win-back emails notices the one that reads like a real person wrote it."},
-  {"type": "framework", "after_heading": "How to respond without over-reacting to one report", "meta": "Read any AI growth story like this",
+   "alt": "Three checks for an AI budget review: spend not just usage, actions that moved a deal, and a comparison against a human baseline."
+  },
+  {
+   "type": "quote",
+   "after_heading": "What this means for how a sales team actually differentiates",
+   "name": "Outreach",
+   "role": "Newsroom release, 9 September 2026",
+   "text": "Revenue teams move beyond insight to AI-driven execution.",
+   "source": "Source: Outreach newsroom, 9 September 2026 (release headline)",
+   "alt": "Quote from Outreach, 9 September 2026: revenue teams move beyond insight to AI-driven execution.",
+   "mode": "org"
+  },
+  {
+   "type": "framework",
+   "after_heading": "How to respond without over-reacting to one report",
+   "meta": "Read any AI growth story like this",
    "headline": "A four-step filter for vendor headlines",
-   "items": [{"title":"Growth is not outcome","text":"Usage and ARR show demand, not better close rates"},
-             {"title":"Check the conditions","text":"A win-back list is not cold outbound"},
-             {"title":"Test one bottleneck","text":"Pick a proven human bottleneck and set a baseline"},
-             {"title":"Invest in the human half","text":"Judgement, repair and a credible LinkedIn presence"}],
+   "items": [
+    {
+     "title": "Growth is not outcome",
+     "text": "Usage and ARR show demand, not better close rates"
+    },
+    {
+     "title": "Check the conditions",
+     "text": "A win-back list is not cold outbound"
+    },
+    {
+     "title": "Test one bottleneck",
+     "text": "Pick a proven human bottleneck and set a baseline"
+    },
+    {
+     "title": "Invest in the human half",
+     "text": "Judgement, repair and a credible LinkedIn presence"
+    }
+   ],
    "source": "Source: SocialSprint analysis",
-   "alt": "A four-step filter for vendor AI growth claims: growth is not outcome, check the conditions, test one bottleneck, invest in the human half."}
+   "alt": "A four-step filter for vendor AI growth claims: growth is not outcome, check the conditions, test one bottleneck, invest in the human half."
+  }
  ]
 }

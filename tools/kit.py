@@ -123,6 +123,18 @@ def hero(v, title):
             y = 340 + i * 90; wv = 700 * val / mxv
             b += T(64, y - 10, lab, 'I', 600, 18, BLUE_L)
             b += f'<rect x="64" y="{y}" width="700" height="44" rx="22" fill="#fff" opacity=".2"/><rect x="64" y="{y}" width="{max(wv,44):.1f}" height="44" rx="22" fill="#fff"/>'
+    elif m == 'gauge':          # semicircle meter filled to pct (quota, attainment, adoption)
+        p = v['pct'] / 100; cx, cy, r = 400, 520, 200
+        th = math.pi * (1 - p); ex, ey = cx + r * math.cos(th), cy - r * math.sin(th)
+        b += f'<path d="M{cx-r} {cy} A{r} {r} 0 0 1 {cx+r} {cy}" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="40" stroke-linecap="round"/>'
+        b += f'<path d="M{cx-r} {cy} A{r} {r} 0 0 1 {ex:.1f} {ey:.1f}" fill="none" stroke="#fff" stroke-width="40" stroke-linecap="round"/>'
+        b += T(cx - r, cy + 50, '0%', 'I', 600, 16, BLUE_L, 'middle') + T(cx + r, cy + 50, v.get('end_label', '100%'), 'I', 600, 16, BLUE_L, 'middle')
+    elif m == 'waffle':         # 10 x 10 grid, k of 100 filled
+        k = round(v['pct'])
+        for i in range(100):
+            x = 64 + (i % 10) * 28; y = 270 + (i // 10) * 28
+            b += f'<rect x="{x}" y="{y}" width="22" height="22" rx="4" fill="#fff" opacity="{1 if i < k else .22}"/>'
+        if v.get('caption'): b += T(370, 410, v['caption'], 'I', 500, 20, BLUE_L)
     b += T(1140, 486, v['value'], 'P', 900, 150 if len(v['value']) <= 4 else 110, '#fff', 'end', -5)
     b += T(1136, 530, v['label'], 'I', 500, 22, BLUE_L, 'end')
     return svg(630, b, BLUE)
@@ -216,16 +228,25 @@ def checklist(v):
     return svg(675, b, '#F5F3FF')
 
 def quote(v):
+    """Emphasis card. Modes: person (named expert, initials only), org (a company or report),
+    none (a key idea with no author). Text must be verbatim when attributed."""
+    mode = v.get('mode', 'none')
     b = f'<rect x="64" y="64" width="8" height="420" fill="{BLUE}"/>'
-    b += T(104, 170, '“', 'P', 900, 150, BLUE_L)
-    size, ql = fit(v['text'], 'P', 800, [40, 36, 32], 1000, 4)
-    b += lines(104, 236, ql, 'P', 800, size, DARK, size + 14)
-    if v.get('andrea'):
-        b += photo(148, 446, 44, 'q', ring='#fff')
+    if mode == 'none':
+        b += meta(104, 120, v.get('meta', 'Key idea'))
+        size, ql = fit(v['text'], 'P', 800, [46, 42, 38, 34], 1000, 4)
+        b += lines(104, 200, ql, 'P', 800, size, DARK, size + 14)
     else:
-        initials = ''.join(p[0] for p in v['name'].split()[:2]).upper()
-        b += f'<circle cx="148" cy="446" r="44" fill="{BLUE}"/>' + T(148, 460, initials, 'P', 800, 34, '#fff', 'middle')
-    b += T(212, 440, v['name'], 'P', 700, 26, DARK) + T(212, 472, v.get('role', ''), 'I', 400, 19, MUTED)
+        b += T(104, 170, '\u201c', 'P', 900, 150, BLUE_L)
+        size, ql = fit(v['text'], 'P', 800, [40, 36, 32], 1000, 4)
+        b += lines(104, 236, ql, 'P', 800, size, DARK, size + 14)
+        if mode == 'person':
+            initials = ''.join(p[0] for p in v['name'].split()[:2]).upper()
+            b += f'<circle cx="148" cy="446" r="44" fill="{BLUE}"/>' + T(148, 460, initials, 'P', 800, 34, '#fff', 'middle')
+            b += T(212, 440, v['name'], 'P', 700, 26, DARK) + T(212, 472, v.get('role', ''), 'I', 400, 19, MUTED)
+        else:
+            b += f'<rect x="104" y="430" width="40" height="4" fill="{BLUE}"/>'
+            b += T(104, 470, v['name'], 'P', 700, 26, DARK) + T(104, 500, v.get('role', ''), 'I', 400, 19, MUTED)
     b += source(v['source']) + wordmark(1006, 603)
     return svg(675, b, BLUE_T)
 
@@ -272,7 +293,7 @@ def to_file(svg_text, path, fmt):
 def build(spec, out):
     os.makedirs(out, exist_ok=True); man = []
     h = spec['hero']
-    man.append({'kind': 'hero', 'file': 'hero.jpg', 'alt': h['alt'], 'bytes': to_file(hero(h, spec['title']), f'{out}/hero.jpg', 'JPEG')})
+    man.append({'kind': 'hero', 'metaphor': h.get('metaphor', 'people'), 'file': 'hero.jpg', 'alt': h['alt'], 'bytes': to_file(hero(h, spec['title']), f'{out}/hero.jpg', 'JPEG')})
     for i, v in enumerate(spec.get('visuals', []), 1):
         f = f'{i:02d}-{v["type"]}.webp'
         man.append({'kind': v['type'], 'file': f, 'alt': v['alt'], 'after_heading': v.get('after_heading'),

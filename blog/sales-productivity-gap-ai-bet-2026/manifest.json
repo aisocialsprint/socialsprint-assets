@@ -1,9 +1,10 @@
 [
   {
     "kind": "hero",
+    "metaphor": "gauge",
     "file": "hero.jpg",
-    "alt": "Only 55% of sellers are expected to hit quota in 2026: 10 sellers with 4.5 shown as missing. Source: Alexander Group.",
-    "bytes": 71088
+    "alt": "Only 55% of sellers are expected to hit quota in 2026, shown as a meter just past halfway. Source: Alexander Group.",
+    "bytes": 53622
   },
   {
     "kind": "bars",
@@ -29,9 +30,9 @@
   {
     "kind": "quote",
     "file": "04-quote.webp",
-    "alt": "Quote from Andrea Piras: betting on AI to fix a productivity problem without changing how pipeline gets built is optimism, not a plan.",
+    "alt": "Key idea: betting on AI to fix a productivity problem without changing how pipeline gets built is optimism, not a plan.",
     "after_heading": "The productivity lever most sales teams aren't counting",
-    "bytes": 39048
+    "bytes": 38044
   },
   {
     "kind": "framework",

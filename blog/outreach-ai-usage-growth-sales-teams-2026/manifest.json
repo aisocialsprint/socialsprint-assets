@@ -1,6 +1,7 @@
 [
   {
     "kind": "hero",
+    "metaphor": "compare",
     "file": "hero.jpg",
     "alt": "Outreach reports AI credit consumption up 12x across its customer base in the first half of 2026. Source: Outreach newsroom, 9 September 2026.",
     "bytes": 58601
@@ -29,9 +30,9 @@
   {
     "kind": "quote",
     "file": "04-quote.webp",
-    "alt": "Quote from Andrea Piras: a buyer who gets three AI-drafted win-back emails notices the one that reads like a real person wrote it.",
+    "alt": "Quote from Outreach, 9 September 2026: revenue teams move beyond insight to AI-driven execution.",
     "after_heading": "What this means for how a sales team actually differentiates",
-    "bytes": 42272
+    "bytes": 29090
   },
   {
     "kind": "framework",
