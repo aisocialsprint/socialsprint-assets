@@ -1,0 +1,80 @@
+{
+ "title": "AI saves sales teams 5 hours a week. Spend it here",
+ "hero": {
+  "metaphor": "waffle",
+  "pct": 72,
+  "caption": "72 in every 100 sales orgs",
+  "value": "72%",
+  "label": "report low reinvestment of saved time",
+  "alt": "72% of sales organisations report low reinvestment of AI-saved time into high-value selling. Source: Gartner survey of 210 sales leaders, 2026."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "What Gartner's reinvestment gap data actually shows",
+   "meta": "Teams that reinvest deliberately",
+   "headline": "Reinvesting the saved time pays off",
+   "unit": "x",
+   "rows": [
+    [
+     "Exceed customer growth goals",
+     2.2,
+     "2.2x"
+    ],
+    [
+     "Exceed lead-to-opportunity goals",
+     3.1,
+     "3.1x"
+    ]
+   ],
+   "max": 3.5,
+   "highlight": "max",
+   "note": "AI saves sellers 4.8 hours a week on average.",
+   "source": "Source: Gartner survey of 210 CSOs and sales leaders, Jan to Feb 2026",
+   "alt": "Teams that reinvest AI-saved time are 2.2 times more likely to exceed customer growth goals and 3.1 times more likely to exceed lead-to-opportunity goals. Source: Gartner."
+  },
+  {
+   "type": "people",
+   "after_heading": "Why the saved time defaults to busywork",
+   "count": 2.9,
+   "meta": "A rep's week",
+   "headline": "Only about 3 in 10 hours of a rep's week is selling",
+   "in_label": "Selling",
+   "out_label": "Admin, meetings, CRM",
+   "source": "Source: Kondo 2025 B2B sales benchmark (active selling 28 to 30% of the week)",
+   "alt": "Active selling is only 28 to 30% of a B2B rep's week. Source: Kondo 2025 benchmark."
+  },
+  {
+   "type": "quote",
+   "after_heading": "Where reinvested time pays off most: LinkedIn relationship work",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "AI raises the ceiling on what reclaimed hours can produce. It doesn't decide where they go.",
+   "source": "Source: SocialSprint analysis",
+   "alt": "Key idea: AI raises the ceiling on what reclaimed hours can produce, but it doesn't decide where they go."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "A weekly reinvestment scorecard sales managers can run",
+   "meta": "A 15-minute Monday review",
+   "headline": "Three columns that stop the time leaking",
+   "items": [
+    [
+     "Hours saved",
+     "Per rep, by task category"
+    ],
+    [
+     "Hours reinvested",
+     "Named: outreach, comments, follow-up, call prep"
+    ],
+    [
+     "What it produced",
+     "Meetings, replies, deals that moved stage"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A weekly reinvestment scorecard: hours saved, hours reinvested and what it produced."
+  }
+ ],
+ "slug": "reinvest-ai-saved-time-sales-team"
+}

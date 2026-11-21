@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "split",
+    "file": "hero.jpg",
+    "alt": "LinkedIn's P(skip) model checks whether at least half of a post stays on screen past a skip threshold. Source: LinkedIn engineering blog.",
+    "bytes": 50713
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "Adding dwell time raised LinkedIn's feed model offline accuracy by up to 10%. Source: LinkedIn engineering.",
+    "after_heading": "What LinkedIn's Own Engineering Team Found",
+    "bytes": 31392
+  },
+  {
+    "kind": "framework",
+    "file": "02-framework.webp",
+    "alt": "Three reasons likes are a weak ranking signal on LinkedIn: binary, noisy and sparse. Source: LinkedIn engineering.",
+    "after_heading": "Why Likes and Clicks Are Weak Signals on Their Own",
+    "bytes": 37200
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "Four ways to write LinkedIn posts for dwell time: front-load one idea, short paragraphs, a reason to pause, no engagement bait.",
+    "after_heading": "How This Changes What You Should Write",
+    "bytes": 50820
+  },
+  {
+    "kind": "quote",
+    "file": "04-quote.webp",
+    "alt": "The coaching question for LinkedIn posts: would a stranger read your second sentence?",
+    "after_heading": "What This Means for a Sales Team's Posting System",
+    "bytes": 24484
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

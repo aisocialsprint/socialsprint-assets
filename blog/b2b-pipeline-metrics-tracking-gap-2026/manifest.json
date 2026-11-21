@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "Only 30% of B2B revenue teams track all 12 core pipeline metrics. Source: Belkins 2026 survey of 164 B2B professionals.",
+    "bytes": 68996
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "52% of B2B teams don't calculate pipeline coverage. Source: Belkins 2026.",
+    "after_heading": "Pipeline coverage: the blind spot more than half of teams share",
+    "bytes": 33832
+  },
+  {
+    "kind": "bars",
+    "file": "02-bars.webp",
+    "alt": "Teams tracking 7 or more of 12 pipeline metrics: 57% of small, 64% of mid-size and 90% of large companies. Source: Belkins.",
+    "after_heading": "The gap widens below 200 employees",
+    "bytes": 34444
+  },
+  {
+    "kind": "bars",
+    "file": "03-bars.webp",
+    "alt": "Among teams that track loss reasons, no decision causes 27% of losses, price 21%, timing 21% and competitors 9%. Source: Belkins.",
+    "after_heading": "What untracked metrics actually cost you",
+    "bytes": 32646
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "Four steps to close the pipeline tracking gap: pick three numbers, review weekly, one owner per metric, revisit quarterly.",
+    "after_heading": "How to close the gap without a software overhaul",
+    "bytes": 56502
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

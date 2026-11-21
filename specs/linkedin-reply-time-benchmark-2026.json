@@ -1,0 +1,100 @@
+{
+ "title": "LinkedIn reply times: why 97.5% land by day 60",
+ "hero": {
+  "metaphor": "split",
+  "pct": 97.5,
+  "value": "97.5%",
+  "label": "of replies land by day 60",
+  "alt": "97.5% of eventual LinkedIn replies arrive within 60 days. Source: Belkins study of 152,636 B2B contacts."
+ },
+ "visuals": [
+  {
+   "type": "quote",
+   "after_heading": "What the Belkins data actually measured",
+   "mode": "org",
+   "name": "Belkins",
+   "role": "LinkedIn Response Time Study, 152,636 contacts",
+   "text": "If someone hasn't accepted your connection request within 14 days, the odds they ever will are low.",
+   "source": "Source: Belkins, LinkedIn Response Time Study",
+   "alt": "Belkins: if someone hasn't accepted your connection request within 14 days, the odds they ever will are low."
+  },
+  {
+   "type": "bars",
+   "after_heading": "The reply curve: why week two is too early to give up",
+   "meta": "Share of eventual replies received",
+   "headline": "Replies keep arriving for two months",
+   "rows": [
+    [
+     "By day 7",
+     60
+    ],
+    [
+     "By day 14",
+     78.5
+    ],
+    [
+     "By day 30",
+     91.8
+    ],
+    [
+     "By day 60",
+     97.5
+    ]
+   ],
+   "max": 100,
+   "highlight": "max",
+   "source": "Source: Belkins, 152,636 B2B LinkedIn contacts, Mar 2025 to Feb 2026",
+   "alt": "Share of eventual LinkedIn replies received: 60% by day 7, 78.5% by day 14, 91.8% by day 30, 97.5% by day 60. Source: Belkins."
+  },
+  {
+   "type": "bars",
+   "after_heading": "Why senior titles take twice as long to answer",
+   "meta": "Average days to first reply",
+   "headline": "Senior titles take longer to answer",
+   "unit": " days",
+   "rows": [
+    [
+     "C-Level and VP",
+     13.5,
+     "13\u201314 days"
+    ],
+    [
+     "Director, Manager, IC",
+     10.5,
+     "10\u201311 days"
+    ]
+   ],
+   "max": 16,
+   "note": "Median reply time is 5 to 6 days for every tier.",
+   "source": "Source: Belkins, LinkedIn Response Time Study",
+   "alt": "Average days to first LinkedIn reply: 13 to 14 for C-level and VP, 10 to 11 for other tiers. Source: Belkins."
+  },
+  {
+   "type": "framework",
+   "after_heading": "A cadence template built around the real numbers",
+   "meta": "A 60-day follow-up cadence",
+   "headline": "A follow-up cadence across 60 days",
+   "items": [
+    {
+     "title": "Day 0",
+     "text": "Connection request with a short, specific note"
+    },
+    {
+     "title": "Days 1 to 7",
+     "text": "First message once accepted"
+    },
+    {
+     "title": "Days 10 to 14",
+     "text": "One follow-up if there's no reply"
+    },
+    {
+     "title": "Days 25 to 60",
+     "text": "New information, then a final check-in"
+    }
+   ],
+   "source": "Source: SocialSprint cadence based on Belkins reply data",
+   "alt": "A 60-day LinkedIn follow-up cadence: request on day 0, message in week one, follow-up by day 14, two final touches by day 60."
+  }
+ ],
+ "slug": "linkedin-reply-time-benchmark-2026"
+}

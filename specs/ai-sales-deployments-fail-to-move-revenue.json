@@ -1,0 +1,84 @@
+{
+ "title": "95% of AI sales deployments fail to move revenue",
+ "hero": {
+  "metaphor": "waffle",
+  "pct": 5,
+  "caption": "5 in every 100",
+  "value": "5%",
+  "label": "of AI deployments move revenue",
+  "alt": "Only 5% of AI deployments in sales organisations drive measurable commercial impact. Source: Gong State of Revenue AI 2026."
+ },
+ "visuals": [
+  {
+   "type": "big_stat",
+   "after_heading": "What Gong's data actually shows",
+   "meta": "Gong, State of Revenue AI 2026",
+   "value": "7.1M",
+   "line": "sales opportunities across 3,613 companies, plus a survey of 3,048 revenue leaders",
+   "source": "Source: Gong, State of Revenue AI 2026",
+   "alt": "Gong analysed 7.1 million sales opportunities across 3,613 companies. Source: Gong State of Revenue AI 2026."
+  },
+  {
+   "type": "quote",
+   "after_heading": "The reinvestment gap: saving time isn't the same as spending it well",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "Saving time isn't the same as spending it well.",
+   "source": "Source: SocialSprint analysis of Gartner and Gong 2026 data",
+   "alt": "Key idea: saving time isn't the same as spending it well."
+  },
+  {
+   "type": "framework",
+   "after_heading": "What the successful 5% do differently",
+   "meta": "What the 5% have in common",
+   "headline": "Four traits of AI rollouts that pay off",
+   "items": [
+    {
+     "title": "One metric first",
+     "text": "A baseline picked before rollout, not after"
+    },
+    {
+     "title": "Inside the workflow",
+     "text": "Not a separate tab reps must remember"
+    },
+    {
+     "title": "An owner for saved time",
+     "text": "Someone decides where the hours go"
+    },
+    {
+     "title": "A short review cycle",
+     "text": "Monthly, not at contract renewal"
+    }
+   ],
+   "source": "Source: SocialSprint analysis of Gong and Gartner 2026",
+   "alt": "Four traits of AI sales rollouts that move revenue: one metric first, in the workflow, an owner for saved time, short review cycles."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "A four-week systems check for your own AI deployments",
+   "meta": "A four-week audit",
+   "headline": "Check your AI deployments in four weeks",
+   "items": [
+    [
+     "Week 1: list every AI tool",
+     "And the metric set before launch, if any"
+    ],
+    [
+     "Week 2: pull a baseline",
+     "Last 90 days of the metric you pick"
+    ],
+    [
+     "Week 3: ask reps where time goes",
+     "A 15-minute conversation, not a survey"
+    ],
+    [
+     "Week 4: set one reinvestment rule",
+     "Then review the metric in 90 days"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A four-week audit of AI sales deployments: list tools, pull a baseline, ask reps, set one reinvestment rule."
+  }
+ ],
+ "slug": "ai-sales-deployments-fail-to-move-revenue"
+}

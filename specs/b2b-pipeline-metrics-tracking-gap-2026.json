@@ -1,0 +1,100 @@
+{
+ "title": "Only 30% of B2B teams track all 12 pipeline metrics",
+ "hero": {
+  "metaphor": "waffle",
+  "pct": 30,
+  "caption": "30 in every 100 teams",
+  "value": "30%",
+  "label": "track all 12 pipeline metrics",
+  "alt": "Only 30% of B2B revenue teams track all 12 core pipeline metrics. Source: Belkins 2026 survey of 164 B2B professionals."
+ },
+ "visuals": [
+  {
+   "type": "big_stat",
+   "after_heading": "Pipeline coverage: the blind spot more than half of teams share",
+   "meta": "The most common blind spot",
+   "value": "52%",
+   "line": "of B2B teams don't calculate pipeline coverage, the ratio that says whether there is enough pipeline to hit the number",
+   "source": "Source: Belkins 2026 survey of 164 B2B professionals",
+   "alt": "52% of B2B teams don't calculate pipeline coverage. Source: Belkins 2026."
+  },
+  {
+   "type": "bars",
+   "after_heading": "The gap widens below 200 employees",
+   "meta": "Teams tracking 7 or more of the 12 metrics",
+   "headline": "Visibility jumps after 200 employees",
+   "rows": [
+    [
+     "Small (1 to 10)",
+     57
+    ],
+    [
+     "Mid-size (11 to 200)",
+     64
+    ],
+    [
+     "Large (201+)",
+     90
+    ]
+   ],
+   "max": 100,
+   "highlight": "max",
+   "source": "Source: Belkins 2026 survey of 164 B2B professionals",
+   "alt": "Teams tracking 7 or more of 12 pipeline metrics: 57% of small, 64% of mid-size and 90% of large companies. Source: Belkins."
+  },
+  {
+   "type": "bars",
+   "after_heading": "What untracked metrics actually cost you",
+   "meta": "Most common loss reason",
+   "headline": "\"No decision\" beats every competitor",
+   "rows": [
+    [
+     "No decision",
+     27
+    ],
+    [
+     "Price",
+     21
+    ],
+    [
+     "Timing",
+     21
+    ],
+    [
+     "Lost to a competitor",
+     9
+    ]
+   ],
+   "max": 30,
+   "source": "Source: Belkins 2026, teams that track loss reasons",
+   "alt": "Among teams that track loss reasons, no decision causes 27% of losses, price 21%, timing 21% and competitors 9%. Source: Belkins."
+  },
+  {
+   "type": "framework",
+   "after_heading": "How to close the gap without a software overhaul",
+   "meta": "No new software needed",
+   "headline": "Four steps to close the tracking gap",
+   "items": [
+    {
+     "title": "Pick three numbers",
+     "text": "Coverage, sharpest drop-off and no-decision losses first"
+    },
+    {
+     "title": "A weekly 15 minutes",
+     "text": "Same three to five numbers in a shared scorecard"
+    },
+    {
+     "title": "One owner per metric",
+     "text": "Nobody owns it, nobody notices it's missing"
+    },
+    {
+     "title": "Revisit quarterly",
+     "text": "Add the next metric once the first three are reliable"
+    }
+   ],
+   "source": "Source: SocialSprint analysis of the Belkins 2026 survey",
+   "alt": "Four steps to close the pipeline tracking gap: pick three numbers, review weekly, one owner per metric, revisit quarterly."
+  }
+ ],
+ "slug": "b2b-pipeline-metrics-tracking-gap-2026"
+}

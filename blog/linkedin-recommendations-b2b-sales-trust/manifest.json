@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "Buyers are 3 times more likely to choose a vendor heavily recommended by peers than one offering a better product or price. Source: LinkedIn and Bain.",
+    "bytes": 57312
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "Vendors are 20 times more likely to be chosen when the whole buying group knows and trusts them. Source: LinkedIn and Bain.",
+    "after_heading": "Why peer trust beats the pitch in B2B deals",
+    "bytes": 29994
+  },
+  {
+    "kind": "bars",
+    "file": "02-bars.webp",
+    "alt": "Only 45% of buyers trust sellers, 86% say expertise drives trust and 75% prefer to buy without a rep. Source: LinkedIn with Ipsos.",
+    "after_heading": "What the Recommendations section actually does",
+    "bytes": 33350
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "Three ways to get a strong LinkedIn recommendation: ask right after a win, give prompts, write one for them first.",
+    "after_heading": "How to ask for a recommendation worth having",
+    "bytes": 46986
+  },
+  {
+    "kind": "quote",
+    "file": "04-quote.webp",
+    "alt": "Key idea: nobody buys on easy to work with, so recommendations need specific outcomes.",
+    "after_heading": "Common mistakes that waste the section",
+    "bytes": 19148
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "gauge",
+    "file": "hero.jpg",
+    "alt": "92% of B2B organisations are experimenting with or running generative engine optimisation. Source: GNW Consulting and Demand Metric 2026.",
+    "bytes": 60863
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "92% of B2B teams test GEO and 78% of investing teams see ROI, but only 22% get over 5% of visits from AI and under 15% have an owner. Source: GNW Consulting and Demand Metric.",
+    "after_heading": "What the 2026 GEO Data Actually Shows",
+    "bytes": 39860
+  },
+  {
+    "kind": "quote",
+    "file": "02-quote.webp",
+    "alt": "Raja Walia, founder of GNW Consulting: GEO has already reached a market tipping point.",
+    "after_heading": "Why Adoption Outpaced Ownership",
+    "bytes": 27134
+  },
+  {
+    "kind": "bars",
+    "file": "03-bars.webp",
+    "alt": "81% of marketers call AI search work SEO internally, 19% GEO and 10% AEO. Source: Fractl.",
+    "after_heading": "The Terminology Problem Is Slowing Teams Down",
+    "bytes": 24734
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "Three steps to start GEO on a lean team: name an owner, audit what's cited, review monthly.",
+    "after_heading": "How a Lean Team Starts GEO Without a Big Budget",
+    "bytes": 44318
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

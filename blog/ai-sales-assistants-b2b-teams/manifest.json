@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "split",
+    "file": "hero.jpg",
+    "alt": "One customer, NeoBid, reported about 65% less manual research and outreach effort with ChatGPT for Sales and HubSpot. Source: Unite.AI.",
+    "bytes": 53137
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "ChatGPT for Sales launched with more than 30 partner plugins including Salesforce, HubSpot, Slack, Teams and Zoom. Source: OpenAI.",
+    "after_heading": "What OpenAI Just Shipped, in Plain Terms",
+    "bytes": 30452
+  },
+  {
+    "kind": "framework",
+    "file": "02-framework.webp",
+    "alt": "Three speeds of sales work under AI: admin gets faster, outreach faster with a catch, trust-building not faster at all.",
+    "after_heading": "The Work That's About to Get Faster, and the Work That Isn't",
+    "bytes": 43426
+  },
+  {
+    "kind": "quote",
+    "file": "03-quote.webp",
+    "alt": "Key idea: a meeting brief only needs to be accurate, a message to a stranger needs to be credible.",
+    "after_heading": "The Trust Gap an Admin Tool Doesn't Close",
+    "bytes": 34212
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "Where AI-saved time should go: LinkedIn posts and comments, personal outreach to at-risk accounts, and live buyer conversations.",
+    "after_heading": "Where the Freed-Up Time Actually Goes",
+    "bytes": 47286
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

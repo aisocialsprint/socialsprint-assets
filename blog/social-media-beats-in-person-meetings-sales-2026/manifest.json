@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "45% of sales professionals rate social media very effective at driving sales, against 44% for in-person meetings. Source: HubSpot State of Sales.",
+    "bytes": 59683
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Channels rated very effective: social media 45%, in-person meetings 44%, video calls 35%, phone 34%, email 32%. Source: HubSpot.",
+    "after_heading": "What HubSpot's Data Actually Shows",
+    "bytes": 36086
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "Social media drives a 42% cold outreach response rate against 26% for email. Source: HubSpot.",
+    "after_heading": "Why Social Media Pulled Ahead of Face-to-Face Selling",
+    "bytes": 26604
+  },
+  {
+    "kind": "quote",
+    "file": "03-quote.webp",
+    "alt": "Key idea: social is the channel that decides whether a meeting happens.",
+    "after_heading": "What This Means for Your Team's Channel Mix",
+    "bytes": 30894
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "Four ways to schedule social selling: a fixed slot, a shared scorecard, replies as qualification, outcomes over likes.",
+    "after_heading": "How to Build a Social-First Front End Without Dropping Meetings",
+    "bytes": 54318
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

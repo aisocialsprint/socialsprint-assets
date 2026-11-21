@@ -1,0 +1,97 @@
+{
+ "title": "GEO adoption hits 92% in B2B marketing, ownership lags",
+ "hero": {
+  "metaphor": "gauge",
+  "pct": 92,
+  "end_label": "All B2B teams",
+  "value": "92%",
+  "label": "of B2B teams are testing GEO",
+  "alt": "92% of B2B organisations are experimenting with or running generative engine optimisation. Source: GNW Consulting and Demand Metric 2026."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "What the 2026 GEO Data Actually Shows",
+   "meta": "GEO in B2B, 2026",
+   "headline": "Adoption is racing ahead of ownership",
+   "rows": [
+    [
+     "Testing or running GEO",
+     92
+    ],
+    [
+     "Investing teams seeing ROI",
+     78
+    ],
+    [
+     "AI traffic over 5% of visits",
+     22
+    ],
+    [
+     "Have a dedicated owner",
+     14,
+     "Under 15%"
+    ]
+   ],
+   "max": 100,
+   "source": "Source: GNW Consulting and Demand Metric, 225 B2B leaders, 2026",
+   "alt": "92% of B2B teams test GEO and 78% of investing teams see ROI, but only 22% get over 5% of visits from AI and under 15% have an owner. Source: GNW Consulting and Demand Metric."
+  },
+  {
+   "type": "quote",
+   "after_heading": "Why Adoption Outpaced Ownership",
+   "mode": "person",
+   "name": "Raja Walia",
+   "role": "Founder, GNW Consulting",
+   "text": "GEO has already reached a market tipping point.",
+   "source": "Source: GNW Consulting 2026 GEO study (via TechIntelPro)",
+   "alt": "Raja Walia, founder of GNW Consulting: GEO has already reached a market tipping point."
+  },
+  {
+   "type": "bars",
+   "after_heading": "The Terminology Problem Is Slowing Teams Down",
+   "meta": "What marketers call the work",
+   "headline": "Most teams still call it SEO",
+   "rows": [
+    [
+     "SEO",
+     81
+    ],
+    [
+     "GEO",
+     19
+    ],
+    [
+     "AEO",
+     10
+    ]
+   ],
+   "max": 100,
+   "source": "Source: Fractl survey of 343 US marketers, 2026",
+   "alt": "81% of marketers call AI search work SEO internally, 19% GEO and 10% AEO. Source: Fractl."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "How a Lean Team Starts GEO Without a Big Budget",
+   "meta": "No agency needed",
+   "headline": "Start GEO this month on a lean team",
+   "items": [
+    [
+     "Name an owner, even part-time",
+     "Fewer than 15% of organisations have one"
+    ],
+    [
+     "Audit what is already cited",
+     "Ask AI engines your buyers' questions"
+    ],
+    [
+     "Review it monthly",
+     "The same five questions, 15 minutes"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "Three steps to start GEO on a lean team: name an owner, audit what's cited, review monthly."
+  }
+ ],
+ "slug": "geo-adoption-b2b-marketing-2026"
+}

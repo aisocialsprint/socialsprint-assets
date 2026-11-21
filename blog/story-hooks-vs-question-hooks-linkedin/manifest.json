@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "Story hooks lead LinkedIn engagement at a 2.60% median, question hooks trail at 2.16%. Source: AuthoredUp analysis of 309,614 posts.",
+    "bytes": 57017
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Median LinkedIn engagement by hook: story 2.60%, contrarian 2.31%, statement 2.27%, results 2.19%, question 2.16%. Source: AuthoredUp.",
+    "after_heading": "What the data actually shows",
+    "bytes": 37664
+  },
+  {
+    "kind": "quote",
+    "file": "02-quote.webp",
+    "alt": "Key idea: a question works as a closer, not an opener.",
+    "after_heading": "Why \"always open with a question\" is bad advice",
+    "bytes": 35142
+  },
+  {
+    "kind": "framework",
+    "file": "03-framework.webp",
+    "alt": "A question hook versus a story hook for the same LinkedIn post about a stalled deal.",
+    "after_heading": "What a story hook looks like for a B2B seller",
+    "bytes": 34412
+  },
+  {
+    "kind": "bars",
+    "file": "04-bars.webp",
+    "alt": "LinkedIn hooks under 40 characters reach 2.61% median engagement against 2.08% for hooks over 200 characters. Source: AuthoredUp.",
+    "after_heading": "Length and closing lines matter too",
+    "bytes": 27576
+  },
+  {
+    "kind": "checklist",
+    "file": "05-checklist.webp",
+    "alt": "A weekly routine to fix LinkedIn hooks: write the hook alone, flag question openers, track hook style for a month.",
+    "after_heading": "How to build this into your team's posting habit",
+    "bytes": 47314
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

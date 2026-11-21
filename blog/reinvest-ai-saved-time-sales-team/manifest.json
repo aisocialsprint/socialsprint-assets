@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "72% of sales organisations report low reinvestment of AI-saved time into high-value selling. Source: Gartner survey of 210 sales leaders, 2026.",
+    "bytes": 74589
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Teams that reinvest AI-saved time are 2.2 times more likely to exceed customer growth goals and 3.1 times more likely to exceed lead-to-opportunity goals. Source: Gartner.",
+    "after_heading": "What Gartner's reinvestment gap data actually shows",
+    "bytes": 37448
+  },
+  {
+    "kind": "people",
+    "file": "02-people.webp",
+    "alt": "Active selling is only 28 to 30% of a B2B rep's week. Source: Kondo 2025 benchmark.",
+    "after_heading": "Why the saved time defaults to busywork",
+    "bytes": 35724
+  },
+  {
+    "kind": "quote",
+    "file": "03-quote.webp",
+    "alt": "Key idea: AI raises the ceiling on what reclaimed hours can produce, but it doesn't decide where they go.",
+    "after_heading": "Where reinvested time pays off most: LinkedIn relationship work",
+    "bytes": 34158
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "A weekly reinvestment scorecard: hours saved, hours reinvested and what it produced.",
+    "after_heading": "A weekly reinvestment scorecard sales managers can run",
+    "bytes": 42236
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

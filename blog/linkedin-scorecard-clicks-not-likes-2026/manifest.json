@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "LinkedIn likes fell 13% year on year in 2026 while total engagement rose almost 14%. Source: Metricool 2026 LinkedIn study.",
+    "bytes": 59981
+  },
+  {
+    "kind": "quote",
+    "file": "01-quote.webp",
+    "alt": "Key idea: a LinkedIn post with zero comments can still be doing real work.",
+    "after_heading": "What the 2026 data actually shows",
+    "bytes": 25498
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "LinkedIn clicks rose 5% in 2026 while likes fell 13%, comments 17% and shares 10%. Source: Metricool.",
+    "after_heading": "Why \"invisible interactions\" explain the gap",
+    "bytes": 29874
+  },
+  {
+    "kind": "framework",
+    "file": "03-framework.webp",
+    "alt": "Illustrative example: a post with more likes can do less pipeline work than a post with clicks and saves from a target account.",
+    "after_heading": "A worked example from a typical week",
+    "bytes": 33960
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "A weekly LinkedIn scorecard: click-throughs, saves, comment quality and who engaged.",
+    "after_heading": "Build a weekly scorecard: what to track instead of likes",
+    "bytes": 46656
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

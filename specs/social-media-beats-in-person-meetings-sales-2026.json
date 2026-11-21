@@ -1,0 +1,97 @@
+{
+ "title": "Social media beats in-person meetings in sales in 2026",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [
+   [
+    "In-person meetings",
+    44
+   ],
+   [
+    "Social media",
+    45
+   ]
+  ],
+  "value": "45%",
+  "label": "rate social media very effective",
+  "alt": "45% of sales professionals rate social media very effective at driving sales, against 44% for in-person meetings. Source: HubSpot State of Sales."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "What HubSpot's Data Actually Shows",
+   "meta": "Rated very effective at driving sales",
+   "headline": "Social edges past face-to-face",
+   "rows": [
+    [
+     "Social media",
+     45
+    ],
+    [
+     "In-person meetings",
+     44
+    ],
+    [
+     "Video calls",
+     35
+    ],
+    [
+     "Phone calls",
+     34
+    ],
+    [
+     "Email",
+     32
+    ]
+   ],
+   "max": 50,
+   "source": "Source: HubSpot, State of Sales research",
+   "alt": "Channels rated very effective: social media 45%, in-person meetings 44%, video calls 35%, phone 34%, email 32%. Source: HubSpot."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "Why Social Media Pulled Ahead of Face-to-Face Selling",
+   "meta": "Cold outreach response rate",
+   "value": "42%",
+   "line": "response rate to cold outreach on social media, against 26% for email",
+   "source": "Source: HubSpot, State of Sales research",
+   "alt": "Social media drives a 42% cold outreach response rate against 26% for email. Source: HubSpot."
+  },
+  {
+   "type": "quote",
+   "after_heading": "What This Means for Your Team's Channel Mix",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "Social is the channel doing the work that decides whether a meeting happens.",
+   "source": "Source: SocialSprint analysis",
+   "alt": "Key idea: social is the channel that decides whether a meeting happens."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "How to Build a Social-First Front End Without Dropping Meetings",
+   "meta": "Social selling, scheduled",
+   "headline": "Give social selling a real place in the week",
+   "items": [
+    [
+     "Give it a fixed slot",
+     "Like meeting prep already has"
+    ],
+    [
+     "Put it on the same scorecard",
+     "Social touches, replies, meetings sourced"
+    ],
+    [
+     "Treat a reply as a qualifying step",
+     "Route it like a warm referral"
+    ],
+    [
+     "Measure outcomes, not likes",
+     "Replies and meetings from named accounts"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "Four ways to schedule social selling: a fixed slot, a shared scorecard, replies as qualification, outcomes over likes."
+  }
+ ],
+ "slug": "social-media-beats-in-person-meetings-sales-2026"
+}

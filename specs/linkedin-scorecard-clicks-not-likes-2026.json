@@ -1,0 +1,84 @@
+{
+ "title": "Why your LinkedIn scorecard should track clicks, not likes",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [
+   [
+    "Likes, 2025 (indexed)",
+    100
+   ],
+   [
+    "Likes, 2026",
+    87
+   ]
+  ],
+  "value": "-13%",
+  "label": "LinkedIn likes year on year",
+  "alt": "LinkedIn likes fell 13% year on year in 2026 while total engagement rose almost 14%. Source: Metricool 2026 LinkedIn study."
+ },
+ "visuals": [
+  {
+   "type": "quote",
+   "after_heading": "What the 2026 data actually shows",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "A post with zero comments can still be doing real work.",
+   "source": "Source: SocialSprint analysis of Metricool 2026",
+   "alt": "Key idea: a LinkedIn post with zero comments can still be doing real work."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "Why \"invisible interactions\" explain the gap",
+   "meta": "The interactions nobody sees",
+   "value": "+5%",
+   "line": "growth in LinkedIn post clicks in 2026, while likes fell 13%, comments 17% and shares 10%",
+   "source": "Source: Metricool 2026, 673,658 posts from 63,108 accounts",
+   "alt": "LinkedIn clicks rose 5% in 2026 while likes fell 13%, comments 17% and shares 10%. Source: Metricool."
+  },
+  {
+   "type": "framework",
+   "after_heading": "A worked example from a typical week",
+   "meta": "Illustrative example",
+   "headline": "Two posts, one real winner",
+   "items": [
+    {
+     "title": "Post A looks like a win",
+     "text": "10 likes, 3 comments from colleagues, 2 internal clicks"
+    },
+    {
+     "title": "Post B is the win",
+     "text": "2 likes, 11 clicks, 4 saves, a VP at a target account"
+    }
+   ],
+   "source": "Illustrative example from the article",
+   "alt": "Illustrative example: a post with more likes can do less pipeline work than a post with clicks and saves from a target account."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "Build a weekly scorecard: what to track instead of likes",
+   "meta": "A 15-minute Monday review",
+   "headline": "Four columns to track instead of likes",
+   "items": [
+    [
+     "Click-throughs",
+     "From LinkedIn's own post analytics"
+    ],
+    [
+     "Saves",
+     "A stronger intent signal than a like"
+    ],
+    [
+     "Comment quality, not count",
+     "One target account beats ten colleagues"
+    ],
+    [
+     "Who engaged",
+     "Matched against your account list"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A weekly LinkedIn scorecard: click-throughs, saves, comment quality and who engaged."
+  }
+ ],
+ "slug": "linkedin-scorecard-clicks-not-likes-2026"
+}

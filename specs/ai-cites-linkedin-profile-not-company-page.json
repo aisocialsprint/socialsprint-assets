@@ -1,0 +1,106 @@
+{
+ "title": "Why AI cites your LinkedIn profile, not your company page",
+ "hero": {
+  "metaphor": "people",
+  "total": 10,
+  "gone": 2.5,
+  "value": "75%",
+  "label": "of citations are people",
+  "alt": "75% of LinkedIn citations in AI answers come from individual profiles, 25% from Company Pages. Source: Meltwater and LinkedIn, 9.5 million citations."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "What the Meltwater x LinkedIn study actually measured",
+   "meta": "Share of all AI citations",
+   "headline": "LinkedIn sits in AI search's top tier",
+   "unit": "%",
+   "rows": [
+    [
+     "YouTube",
+     1.52
+    ],
+    [
+     "LinkedIn",
+     0.53
+    ],
+    [
+     "Reddit",
+     0.44
+    ],
+    [
+     "Capterra",
+     0.38
+    ],
+    [
+     "Medium",
+     0.21
+    ]
+   ],
+   "max": 1.7,
+   "highlight": "LinkedIn",
+   "note": "LinkedIn's share grew 26% in four weeks.",
+   "source": "Source: Meltwater and LinkedIn, 9.5 million AI citations, May 2026",
+   "alt": "Share of AI citations: YouTube 1.52%, LinkedIn 0.53%, Reddit 0.44%, Capterra 0.38%, Medium 0.21%. Source: Meltwater and LinkedIn."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "Follower count is not the gatekeeper",
+   "meta": "Small accounts get cited",
+   "value": "51%",
+   "line": "of cited creators have fewer than 10,000 followers; the 1,000 to 10,000 bracket alone gives 40% of citations",
+   "source": "Source: Meltwater and LinkedIn, May 2026",
+   "alt": "51% of LinkedIn creators cited by AI have fewer than 10,000 followers. Source: Meltwater and LinkedIn."
+  },
+  {
+   "type": "bars",
+   "after_heading": "The format AI engines actually cite: plain text",
+   "meta": "Cited LinkedIn content by format",
+   "headline": "AI engines cite plain text",
+   "rows": [
+    [
+     "Text posts",
+     72
+    ],
+    [
+     "Articles",
+     12
+    ],
+    [
+     "Video",
+     11
+    ]
+   ],
+   "max": 80,
+   "source": "Source: Meltwater and LinkedIn, May 2026",
+   "alt": "Of LinkedIn content cited by AI, 72% is text posts, 12% articles and 11% video. Source: Meltwater and LinkedIn."
+  },
+  {
+   "type": "framework",
+   "after_heading": "How to make your LinkedIn content more citable",
+   "meta": "Write to be cited",
+   "headline": "Four ways to get cited by AI search",
+   "items": [
+    {
+     "title": "Post from people",
+     "text": "Individuals, not just the Company Page"
+    },
+    {
+     "title": "Write plain text",
+     "text": "72% of cited content is text posts"
+    },
+    {
+     "title": "Be specific and named",
+     "text": "Companies, numbers, headings, bullets"
+    },
+    {
+     "title": "Stay recent",
+     "text": "48% of cited content is under 3 months old"
+    }
+   ],
+   "source": "Source: SocialSprint analysis of Meltwater and LinkedIn data",
+   "alt": "Four ways to get LinkedIn content cited by AI: post from people, plain text, be specific, stay recent."
+  }
+ ],
+ "slug": "ai-cites-linkedin-profile-not-company-page"
+}

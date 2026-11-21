@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "gauge",
+    "file": "hero.jpg",
+    "alt": "LinkedIn produced 62% of all AI-generated content flagged across five platforms. Source: Pangram study of 1,002,627 posts.",
+    "bytes": 54438
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "LinkedIn supplied about a third of 1,002,627 scanned posts but 62% of flagged AI content. Source: Pangram.",
+    "after_heading": "How big is LinkedIn's AI content problem, really",
+    "bytes": 32188
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "A top-level LinkedIn post was 1.35 times more likely to be flagged as AI-generated than a comment on it. Source: Pangram.",
+    "after_heading": "Why a post is more likely to be flagged than a comment",
+    "bytes": 29394
+  },
+  {
+    "kind": "framework",
+    "file": "03-framework.webp",
+    "alt": "Four habits to keep LinkedIn posts human: AI for structure only, one real detail, shorter posts, read it out loud.",
+    "after_heading": "How to keep LinkedIn content from reading like the other 40%",
+    "bytes": 50452
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "A 15-minute monthly audit of team LinkedIn posts for AI overreliance.",
+    "after_heading": "A simple way to audit your team's posts for AI overreliance",
+    "bytes": 53648
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

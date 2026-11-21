@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "split",
+    "file": "hero.jpg",
+    "alt": "97.5% of eventual LinkedIn replies arrive within 60 days. Source: Belkins study of 152,636 B2B contacts.",
+    "bytes": 48219
+  },
+  {
+    "kind": "quote",
+    "file": "01-quote.webp",
+    "alt": "Belkins: if someone hasn't accepted your connection request within 14 days, the odds they ever will are low.",
+    "after_heading": "What the Belkins data actually measured",
+    "bytes": 36052
+  },
+  {
+    "kind": "bars",
+    "file": "02-bars.webp",
+    "alt": "Share of eventual LinkedIn replies received: 60% by day 7, 78.5% by day 14, 91.8% by day 30, 97.5% by day 60. Source: Belkins.",
+    "after_heading": "The reply curve: why week two is too early to give up",
+    "bytes": 35212
+  },
+  {
+    "kind": "bars",
+    "file": "03-bars.webp",
+    "alt": "Average days to first LinkedIn reply: 13 to 14 for C-level and VP, 10 to 11 for other tiers. Source: Belkins.",
+    "after_heading": "Why senior titles take twice as long to answer",
+    "bytes": 34556
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "A 60-day LinkedIn follow-up cadence: request on day 0, message in week one, follow-up by day 14, two final touches by day 60.",
+    "after_heading": "A cadence template built around the real numbers",
+    "bytes": 46534
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

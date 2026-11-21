@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "Only 5% of AI deployments in sales organisations drive measurable commercial impact. Source: Gong State of Revenue AI 2026.",
+    "bytes": 61702
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "Gong analysed 7.1 million sales opportunities across 3,613 companies. Source: Gong State of Revenue AI 2026.",
+    "after_heading": "What Gong's data actually shows",
+    "bytes": 26644
+  },
+  {
+    "kind": "quote",
+    "file": "02-quote.webp",
+    "alt": "Key idea: saving time isn't the same as spending it well.",
+    "after_heading": "The reinvestment gap: saving time isn't the same as spending it well",
+    "bytes": 24166
+  },
+  {
+    "kind": "framework",
+    "file": "03-framework.webp",
+    "alt": "Four traits of AI sales rollouts that move revenue: one metric first, in the workflow, an owner for saved time, short review cycles.",
+    "after_heading": "What the successful 5% do differently",
+    "bytes": 52466
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "A four-week audit of AI sales deployments: list tools, pull a baseline, ask reps, set one reinvestment rule.",
+    "after_heading": "A four-week systems check for your own AI deployments",
+    "bytes": 54630
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

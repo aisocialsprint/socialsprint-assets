@@ -1,0 +1,75 @@
+{
+ "title": "AI sales assistants are here: what B2B teams should do",
+ "hero": {
+  "metaphor": "split",
+  "pct": 65,
+  "value": "65%",
+  "label": "less manual effort, NeoBid",
+  "alt": "One customer, NeoBid, reported about 65% less manual research and outreach effort with ChatGPT for Sales and HubSpot. Source: Unite.AI."
+ },
+ "visuals": [
+  {
+   "type": "big_stat",
+   "after_heading": "What OpenAI Just Shipped, in Plain Terms",
+   "meta": "ChatGPT for Sales, 17 November 2026",
+   "value": "30+",
+   "line": "partner plugins at launch, across CRMs like Salesforce and HubSpot and tools like Slack, Teams and Zoom",
+   "source": "Source: OpenAI, 17 November 2026",
+   "alt": "ChatGPT for Sales launched with more than 30 partner plugins including Salesforce, HubSpot, Slack, Teams and Zoom. Source: OpenAI."
+  },
+  {
+   "type": "framework",
+   "after_heading": "The Work That's About to Get Faster, and the Work That Isn't",
+   "meta": "What AI changes",
+   "headline": "Three kinds of sales work, three speeds",
+   "items": [
+    {
+     "title": "Faster, fast",
+     "text": "Meeting prep, summaries, pipeline reviews, follow-ups"
+    },
+    {
+     "title": "Faster, with a catch",
+     "text": "Research and personalised outreach still need a human voice"
+    },
+    {
+     "title": "Not faster at all",
+     "text": "Warm intros, a real point of view, trust"
+    }
+   ],
+   "source": "Source: SocialSprint analysis",
+   "alt": "Three speeds of sales work under AI: admin gets faster, outreach faster with a catch, trust-building not faster at all."
+  },
+  {
+   "type": "quote",
+   "after_heading": "The Trust Gap an Admin Tool Doesn't Close",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "A meeting brief only needs to be accurate. A message to a stranger needs to be credible.",
+   "source": "Source: SocialSprint analysis",
+   "alt": "Key idea: a meeting brief only needs to be accurate, a message to a stranger needs to be credible."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "Where the Freed-Up Time Actually Goes",
+   "meta": "Reinvest the saved hours",
+   "headline": "Where the saved hours should go",
+   "items": [
+    [
+     "Post and comment as yourself",
+     "A point of view the AI brief didn't generate"
+    ],
+    [
+     "Write to at-risk accounts",
+     "Informed by AI research, written by the rep"
+    ],
+    [
+     "Have the live conversations",
+     "The ones the AI summarised but can't have"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "Where AI-saved time should go: LinkedIn posts and comments, personal outreach to at-risk accounts, and live buyer conversations."
+  }
+ ],
+ "slug": "ai-sales-assistants-b2b-teams"
+}

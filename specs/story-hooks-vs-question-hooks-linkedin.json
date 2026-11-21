@@ -1,0 +1,124 @@
+{
+ "title": "Why story hooks beat question hooks on LinkedIn",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [
+   [
+    "Question hooks",
+    2.16
+   ],
+   [
+    "Story hooks",
+    2.6
+   ]
+  ],
+  "value": "2.60%",
+  "label": "median engagement, story hooks",
+  "alt": "Story hooks lead LinkedIn engagement at a 2.60% median, question hooks trail at 2.16%. Source: AuthoredUp analysis of 309,614 posts."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "What the data actually shows",
+   "meta": "Median engagement by hook style",
+   "headline": "Question hooks come last of five",
+   "unit": "%",
+   "rows": [
+    [
+     "Story",
+     2.6,
+     "2.60%"
+    ],
+    [
+     "Contrarian",
+     2.31
+    ],
+    [
+     "Statement",
+     2.27
+    ],
+    [
+     "Results",
+     2.19
+    ],
+    [
+     "Question",
+     2.16
+    ]
+   ],
+   "max": 2.8,
+   "source": "Source: AuthoredUp, 309,614 personal-profile posts, Dec 2025 to May 2026",
+   "alt": "Median LinkedIn engagement by hook: story 2.60%, contrarian 2.31%, statement 2.27%, results 2.19%, question 2.16%. Source: AuthoredUp."
+  },
+  {
+   "type": "quote",
+   "after_heading": "Why \"always open with a question\" is bad advice",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "A question works as a closer that invites a response, not as an opener that has to earn one.",
+   "source": "Source: SocialSprint analysis of AuthoredUp data",
+   "alt": "Key idea: a question works as a closer, not an opener."
+  },
+  {
+   "type": "framework",
+   "after_heading": "What a story hook looks like for a B2B seller",
+   "meta": "Same post, two openers",
+   "headline": "Drop the reader into a moment",
+   "items": [
+    {
+     "title": "Question hook",
+     "text": "Have you ever had a deal go quiet for no reason?"
+    },
+    {
+     "title": "Story hook",
+     "text": "The deal went quiet for nine days. Then the champion left the company."
+    }
+   ],
+   "source": "Examples from the article",
+   "alt": "A question hook versus a story hook for the same LinkedIn post about a stalled deal."
+  },
+  {
+   "type": "bars",
+   "after_heading": "Length and closing lines matter too",
+   "meta": "Median engagement by hook length",
+   "headline": "Short first lines win",
+   "unit": "%",
+   "rows": [
+    [
+     "Under 40 characters",
+     2.61
+    ],
+    [
+     "Over 200 characters",
+     2.08
+    ]
+   ],
+   "max": 2.8,
+   "source": "Source: AuthoredUp, 309,614 personal-profile posts",
+   "alt": "LinkedIn hooks under 40 characters reach 2.61% median engagement against 2.08% for hooks over 200 characters. Source: AuthoredUp."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "How to build this into your team's posting habit",
+   "meta": "A weekly routine",
+   "headline": "Fix your team's hooks in one week",
+   "items": [
+    [
+     "Write the hook as a standalone line",
+     "Starts with \"have you ever\"? Rewrite it as a moment"
+    ],
+    [
+     "Flag question openers on Monday",
+     "Talk through the story version"
+    ],
+    [
+     "Track hook style for a month",
+     "Next to each post's engagement rate"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A weekly routine to fix LinkedIn hooks: write the hook alone, flag question openers, track hook style for a month."
+  }
+ ],
+ "slug": "story-hooks-vs-question-hooks-linkedin"
+}

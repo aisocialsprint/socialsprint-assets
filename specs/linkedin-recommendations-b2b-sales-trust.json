@@ -1,0 +1,85 @@
+{
+ "title": "LinkedIn recommendations: why B2B buyers trust them",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [
+   [
+    "Better product or lower price",
+    1
+   ],
+   [
+    "Heavily recommended by peers",
+    3
+   ]
+  ],
+  "value": "3x",
+  "label": "more likely to be chosen",
+  "alt": "Buyers are 3 times more likely to choose a vendor heavily recommended by peers than one offering a better product or price. Source: LinkedIn and Bain."
+ },
+ "visuals": [
+  {
+   "type": "big_stat",
+   "after_heading": "Why peer trust beats the pitch in B2B deals",
+   "meta": "Known and trusted by the whole group",
+   "value": "20x",
+   "line": "more likely to be chosen when the whole buying group already knows and trusts the vendor",
+   "source": "Source: LinkedIn and Bain, B2B buying research",
+   "alt": "Vendors are 20 times more likely to be chosen when the whole buying group knows and trusts them. Source: LinkedIn and Bain."
+  },
+  {
+   "type": "bars",
+   "after_heading": "What the Recommendations section actually does",
+   "meta": "The trust gap",
+   "headline": "Buyers value expertise, few trust sellers",
+   "rows": [
+    [
+     "Trust sellers",
+     45
+    ],
+    [
+     "Say expertise drives trust",
+     86
+    ],
+    [
+     "Prefer to buy without a rep",
+     75
+    ]
+   ],
+   "max": 100,
+   "source": "Source: LinkedIn Trust Advantage research with Ipsos, 900+ buyers",
+   "alt": "Only 45% of buyers trust sellers, 86% say expertise drives trust and 75% prefer to buy without a rep. Source: LinkedIn with Ipsos."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "How to ask for a recommendation worth having",
+   "meta": "Asking well",
+   "headline": "How to get a recommendation worth having",
+   "items": [
+    [
+     "Ask right after a win",
+     "While the specifics are still fresh"
+    ],
+    [
+     "Give two or three prompts",
+     "The problem before, what changed, what working together was like"
+    ],
+    [
+     "Write one for them first",
+     "It makes the ask feel far less transactional"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "Three ways to get a strong LinkedIn recommendation: ask right after a win, give prompts, write one for them first."
+  },
+  {
+   "type": "quote",
+   "after_heading": "Common mistakes that waste the section",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "Nobody buys on easy to work with.",
+   "source": "Source: SocialSprint analysis",
+   "alt": "Key idea: nobody buys on easy to work with, so recommendations need specific outcomes."
+  }
+ ],
+ "slug": "linkedin-recommendations-b2b-sales-trust"
+}

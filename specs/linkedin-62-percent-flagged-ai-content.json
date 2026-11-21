@@ -1,0 +1,96 @@
+{
+ "title": "LinkedIn carries 62% of all flagged AI content",
+ "hero": {
+  "metaphor": "gauge",
+  "pct": 62,
+  "end_label": "All flagged AI content",
+  "value": "62%",
+  "label": "of flagged AI content is on LinkedIn",
+  "alt": "LinkedIn produced 62% of all AI-generated content flagged across five platforms. Source: Pangram study of 1,002,627 posts."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "How big is LinkedIn's AI content problem, really",
+   "meta": "LinkedIn in Pangram's study",
+   "headline": "A third of the posts, 62% of the AI",
+   "rows": [
+    [
+     "Share of posts scanned",
+     33,
+     "About a third"
+    ],
+    [
+     "Share of flagged AI content",
+     62
+    ]
+   ],
+   "max": 100,
+   "highlight": "max",
+   "source": "Source: Pangram, 1,002,627 posts across 5 platforms (via ppc.land)",
+   "alt": "LinkedIn supplied about a third of 1,002,627 scanned posts but 62% of flagged AI content. Source: Pangram."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "Why a post is more likely to be flagged than a comment",
+   "meta": "Posts versus comments",
+   "value": "1.35x",
+   "line": "more likely to be flagged as AI-generated: a top-level LinkedIn post versus a comment underneath it",
+   "source": "Source: Pangram study (via ppc.land)",
+   "alt": "A top-level LinkedIn post was 1.35 times more likely to be flagged as AI-generated than a comment on it. Source: Pangram."
+  },
+  {
+   "type": "framework",
+   "after_heading": "How to keep LinkedIn content from reading like the other 40%",
+   "meta": "Use AI without sounding like it",
+   "headline": "Four habits that keep posts human",
+   "items": [
+    {
+     "title": "Structure, not substance",
+     "text": "Let AI organise your point, never invent it"
+    },
+    {
+     "title": "What actually happened",
+     "text": "One real deal, objection or number per post"
+    },
+    {
+     "title": "Shorten first",
+     "text": "150 to 250 words with a sharp opinion"
+    },
+    {
+     "title": "Read it out loud",
+     "text": "If it fits any company, it reads generic"
+    }
+   ],
+   "source": "Source: SocialSprint analysis",
+   "alt": "Four habits to keep LinkedIn posts human: AI for structure only, one real detail, shorter posts, read it out loud."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "A simple way to audit your team's posts for AI overreliance",
+   "meta": "A 15-minute monthly check",
+   "headline": "Audit your team's posts in 15 minutes",
+   "items": [
+    [
+     "Pull the last 10 long posts",
+     "Per person who posts regularly"
+    ],
+    [
+     "Look for a detail only they could write",
+     "A client, a pipeline number, a disagreement"
+    ],
+    [
+     "Count the generic ones",
+     "More than a third is your 40% problem"
+    ],
+    [
+     "Compare their performance",
+     "The specific posts usually win"
+    ]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A 15-minute monthly audit of team LinkedIn posts for AI overreliance."
+  }
+ ],
+ "slug": "linkedin-62-percent-flagged-ai-content"
+}

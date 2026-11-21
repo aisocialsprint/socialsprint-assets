@@ -114,7 +114,7 @@ def hero(v, title):
             x = 76 + (i % cols) * gap; y = 330 + (i // cols) * gap
             b += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{"#fff" if i < k else "#fff"}" opacity="{1 if i < k else .3}"/>'
     elif m == 'split':          # one bar split at pct
-        p = v['pct'] / 100; wid = 760
+        p = v['pct'] / 100; wid = 700
         b += f'<rect x="64" y="380" width="{wid}" height="80" rx="12" fill="#fff" opacity=".25"/>'
         b += f'<rect x="64" y="380" width="{wid*p:.1f}" height="80" rx="12" fill="#fff"/>'
     elif m == 'compare':        # [[label, value], ...] two or three bars, widths proportional
@@ -136,6 +136,8 @@ def hero(v, title):
             b += f'<rect x="{x}" y="{y}" width="22" height="22" rx="4" fill="#fff" opacity="{1 if i < k else .22}"/>'
         if v.get('caption'): b += T(370, 410, v['caption'], 'I', 500, 20, BLUE_L)
     b += T(1140, 486, v['value'], 'P', 900, 150 if len(v['value']) <= 4 else 110, '#fff', 'end', -5)
+    room = {'people': 310, 'compare': 360, 'split': 360, 'gauge': 500, 'waffle': 500}.get(m, 500)
+    assert tw(v['label'], 'I', 500, 22) <= room, f"hero label too long for {m}: {v['label']}"
     b += T(1136, 530, v['label'], 'I', 500, 22, BLUE_L, 'end')
     return svg(630, b, BLUE)
 
@@ -152,9 +154,14 @@ def bars(v):
         y = y0 + i * step; wv = 720 * val / mx; assert wv <= 720
         b += T(330, y + 29, lab, 'P', 700, lab_size, SLATE, 'end')
         b += f'<rect x="360" y="{y}" width="720" height="44" rx="22" fill="#F1F5F9"/>'
-        top = i == 0 if v.get('highlight', 'first') == 'first' else val == max(r[1] for r in rows)
+        hl = v.get('highlight', 'first')
+        top = (i == 0) if hl == 'first' else (val == max(r[1] for r in rows)) if hl == 'max' else (lab == hl)
         b += f'<rect x="360" y="{y}" width="{max(wv,60):.1f}" height="44" rx="22" fill="{BLUE if top else BLUE_L}"/>'
-        b += T(360 + max(wv, 60) - 18, y + 30, disp, 'P', 800, 22, '#fff' if top else DARK, 'end')
+        bw = max(wv, 60)
+        if tw(disp, 'P', 800, 22) + 36 > bw:   # value does not fit inside the bar: put it just after
+            b += T(360 + bw + 12, y + 30, disp, 'P', 800, 22, DARK)
+        else:
+            b += T(360 + bw - 18, y + 30, disp, 'P', 800, 22, '#fff' if top else DARK, 'end')
     if v.get('avg'):
         ax = 360 + 720 * v['avg']['value'] / mx; y1 = y0 + n * step - 10
         b += f'<line x1="{ax:.1f}" y1="{y0-14}" x2="{ax:.1f}" y2="{y1}" stroke="{DARK}" stroke-width="1.5" stroke-dasharray="6 6"/>'
@@ -233,9 +240,10 @@ def quote(v):
     mode = v.get('mode', 'none')
     b = f'<rect x="64" y="64" width="8" height="420" fill="{BLUE}"/>'
     if mode == 'none':
-        b += meta(104, 120, v.get('meta', 'Key idea'))
-        size, ql = fit(v['text'], 'P', 800, [46, 42, 38, 34], 1000, 4)
-        b += lines(104, 200, ql, 'P', 800, size, DARK, size + 14)
+        size, ql = fit(v['text'], 'P', 800, [52, 46, 42, 38, 34], 1000, 4)
+        lh = size + 14; top = 300 - len(ql) * lh / 2
+        b += meta(104, top - 30, v.get('meta', 'Key idea'))
+        b += lines(104, top + size, ql, 'P', 800, size, DARK, lh)
     else:
         b += T(104, 170, '\u201c', 'P', 900, 150, BLUE_L)
         size, ql = fit(v['text'], 'P', 800, [40, 36, 32], 1000, 4)
