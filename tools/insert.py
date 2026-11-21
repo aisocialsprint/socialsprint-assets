@@ -1,6 +1,6 @@
 """Insert kit visuals into an article's markdown.
 
-Usage: python3 tools/insert.py article.md OUTDIR SLUG > article_with_visuals.md
+Usage: python3 tools/insert.py article.md OUTDIR SLUG COMMIT_SHA > article_with_visuals.md
 Each visual goes after the first paragraph that follows its `after_heading` H2
 (matched case-insensitively, ignoring punctuation). The analyser card goes at
 the very end as a linked image. The hero is NOT inserted: it is the cover_image_url.
@@ -9,7 +9,8 @@ Exits non-zero if a heading cannot be found, so nothing is silently dropped.
 import json, re, sys
 
 REPO = 'aisocialsprint/socialsprint-assets'
-def url(slug, f): return f'https://cdn.jsdelivr.net/gh/{REPO}@main/blog/{slug}/{f}'
+REF = 'main'  # set to the commit SHA that added the files, so the CDN can never serve a stale copy
+def url(slug, f): return f'https://cdn.jsdelivr.net/gh/{REPO}@{REF}/blog/{slug}/{f}'
 def norm(s): return re.sub(r'[^a-z0-9 ]', '', s.lower()).strip()
 
 def insert(md, man, slug):
@@ -32,5 +33,6 @@ def insert(md, man, slug):
     return out
 
 if __name__ == '__main__':
+    if len(sys.argv) > 4: REF = sys.argv[4]
     md = open(sys.argv[1]).read(); man = json.load(open(f'{sys.argv[2]}/manifest.json'))
     print(insert(md, man, sys.argv[3]))

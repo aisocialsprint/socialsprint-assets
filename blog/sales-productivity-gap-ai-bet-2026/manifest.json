@@ -10,14 +10,14 @@
     "file": "01-bars.webp",
     "alt": "97% of companies are changing 2026 comp plans, 57% struggle to set accurate quotas, 55% of sellers are expected to hit quota and 21% rate their 2025 plan very effective. Source: Alexander Group.",
     "after_heading": "The 2026 quota math isn't adding up cleanly",
-    "bytes": 42674
+    "bytes": 41132
   },
   {
     "kind": "bars",
     "file": "02-bars.webp",
     "alt": "88 to 90% of firms expect AI to help go-to-market roles, but only 64% have enabled AI in at least one use case. Source: Alexander Group.",
     "after_heading": "The AI bet is real, but it isn't the same as a productivity gain",
-    "bytes": 39476
+    "bytes": 38628
   },
   {
     "kind": "big_stat",
@@ -46,6 +46,6 @@
     "link": "https://socialsprint.co/profile-analyzer",
     "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
     "after_heading": "__END__",
-    "bytes": 63038
+    "bytes": 63758
   }
 ]

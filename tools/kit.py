@@ -133,10 +133,11 @@ def bars(v):
     size, hl = fit(v['headline'], 'P', 800, [36, 32], 1072, 1)
     b += T(64, 132, hl[0], 'P', 800, size, DARK)
     n = len(rows); step = min(100, 340 / n); y0 = 200 if n > 3 else 220
+    lab_size = next(z for z in (22, 20, 18, 16, 15, 14) if all(tw(r[0], 'P', 700, z) <= 290 for r in rows) or z == 14)
+    assert all(tw(r[0], 'P', 700, lab_size) <= 296 for r in rows), 'bar label too long'
     for i, row in enumerate(rows):
         lab, val = row[0], row[1]; disp = row[2] if len(row) > 2 else f'{val:g}{unit}'
         y = y0 + i * step; wv = 720 * val / mx; assert wv <= 720
-        lab_size = 22 if tw(lab, 'P', 700, 22) <= 300 else 18
         b += T(330, y + 29, lab, 'P', 700, lab_size, SLATE, 'end')
         b += f'<rect x="360" y="{y}" width="720" height="44" rx="22" fill="#F1F5F9"/>'
         top = i == 0 if v.get('highlight', 'first') == 'first' else val == max(r[1] for r in rows)
@@ -146,7 +147,7 @@ def bars(v):
         ax = 360 + 720 * v['avg']['value'] / mx; y1 = y0 + n * step - 10
         b += f'<line x1="{ax:.1f}" y1="{y0-14}" x2="{ax:.1f}" y2="{y1}" stroke="{DARK}" stroke-width="1.5" stroke-dasharray="6 6"/>'
         b += T(ax, y0 - 24, v['avg']['label'], 'I', 600, 16, SLATE, 'middle')
-    if v.get('note'): b += T(360, 560, v['note'], 'I', 400, 20, SLATE)
+    if v.get('note'): b += T(360, min(560, y0 + n * step + 40), v['note'], 'I', 400, 20, SLATE)
     b += source(v['source']) + wordmark(1006, 603)
     return svg(675, b, '#fff')
 
@@ -256,7 +257,7 @@ def analyser():
     b += '<g filter="url(#bl)"><rect x="686" y="448" width="400" height="14" rx="7" fill="#94A3B8"/><rect x="686" y="470" width="250" height="14" rx="7" fill="#94A3B8"/></g>'
     b += '<rect x="686" y="496" width="12" height="10" rx="2" fill="#64748B"/><path d="M688.5 496 v-3 a3.5 3.5 0 0 1 7 0 v3" fill="none" stroke="#64748B" stroke-width="2"/>'
     b += T(706, 506, '+3 more in the full report', 'I', 400, 14, MUTED)
-    return svg(600, b, BLUE)
+    return svg(675, f'<g transform="translate(0,37)">{b}</g>', BLUE)
 
 RENDER = {'bars': bars, 'people': people, 'big_stat': big_stat, 'framework': framework,
           'checklist': checklist, 'quote': quote}
