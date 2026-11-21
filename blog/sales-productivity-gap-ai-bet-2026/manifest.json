@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "hero",
+    "file": "hero.jpg",
+    "alt": "Only 55% of sellers are expected to hit quota in 2026: 10 sellers with 4.5 shown as missing. Source: Alexander Group.",
+    "bytes": 71088
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "97% of companies are changing 2026 comp plans, 57% struggle to set accurate quotas, 55% of sellers are expected to hit quota and 21% rate their 2025 plan very effective. Source: Alexander Group.",
+    "after_heading": "The 2026 quota math isn't adding up cleanly",
+    "bytes": 42674
+  },
+  {
+    "kind": "bars",
+    "file": "02-bars.webp",
+    "alt": "88 to 90% of firms expect AI to help go-to-market roles, but only 64% have enabled AI in at least one use case. Source: Alexander Group.",
+    "after_heading": "The AI bet is real, but it isn't the same as a productivity gain",
+    "bytes": 39476
+  },
+  {
+    "kind": "big_stat",
+    "file": "03-big_stat.webp",
+    "alt": "66% of companies are leaning further into pay-for-performance compensation in 2026. Source: Alexander Group.",
+    "after_heading": "Pay-for-performance is rising, which puts more weight on pipeline quality",
+    "bytes": 36176
+  },
+  {
+    "kind": "quote",
+    "file": "04-quote.webp",
+    "alt": "Quote from Andrea Piras: betting on AI to fix a productivity problem without changing how pipeline gets built is optimism, not a plan.",
+    "after_heading": "The productivity lever most sales teams aren't counting",
+    "bytes": 39048
+  },
+  {
+    "kind": "framework",
+    "file": "05-framework.webp",
+    "alt": "A three-part weekly LinkedIn pipeline system: a fixed weekly review, a shared scorecard and a short list of target accounts per rep.",
+    "after_heading": "What a working system looks like",
+    "bytes": 52820
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63038
+  }
+]

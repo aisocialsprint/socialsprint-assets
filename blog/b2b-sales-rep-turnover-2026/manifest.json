@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "hero",
+    "file": "hero.jpg",
+    "alt": "35% of B2B sales reps leave every year: 10 reps with 3.5 shown as gone. Source: Optifai benchmark of 939 B2B companies.",
+    "bytes": 70651
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Annual turnover by role: SDRs and BDRs 45%, account executives 30%, sales managers 28%, customer success 25%. Source: Optifai.",
+    "after_heading": "The Scale of the Problem",
+    "bytes": 41000
+  },
+  {
+    "kind": "people",
+    "file": "02-people.webp",
+    "alt": "A team of 10 SDRs replaces 4 to 5 people every year at 45% annual turnover. Source: Optifai.",
+    "after_heading": "What Turnover Actually Costs You",
+    "bytes": 38710
+  },
+  {
+    "kind": "big_stat",
+    "file": "03-big_stat.webp",
+    "alt": "A bad B2B sales hire costs $177,171 across sourcing, ramp salary, stalled pipeline and manager hours. Source: SalesFuel.",
+    "after_heading": "Why Reps Really Leave",
+    "bytes": 37328
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "Four retention habits: a Monday team review, a real coaching slot, a visible next step, and closing the exit interview loop.",
+    "after_heading": "A System That Actually Reduces Turnover",
+    "bytes": 57094
+  },
+  {
+    "kind": "checklist",
+    "file": "05-checklist.webp",
+    "alt": "Monthly turnover scorecard: turnover by role, tenure at departure, ramp time for recent hires, and manager 1:1 completion rate.",
+    "after_heading": "What to Track Each Month",
+    "bytes": 53914
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63038
+  }
+]

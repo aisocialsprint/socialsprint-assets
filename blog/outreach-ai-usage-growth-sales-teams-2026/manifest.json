@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "hero",
+    "file": "hero.jpg",
+    "alt": "Outreach reports AI credit consumption up 12x across its customer base in the first half of 2026. Source: Outreach newsroom, 9 September 2026.",
+    "bytes": 58601
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "Outreach's AI-linked annual recurring revenue grew 480% year-on-year in its fiscal second quarter. Source: Outreach.",
+    "after_heading": "What the numbers actually show",
+    "bytes": 38110
+  },
+  {
+    "kind": "people",
+    "file": "02-people.webp",
+    "alt": "SolarWinds' win-back agent achieved a 45% reply rate with previously engaged accounts. Source: Outreach.",
+    "after_heading": "The case study that's doing the heavy lifting",
+    "bytes": 44066
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "Three checks for an AI budget review: spend not just usage, actions that moved a deal, and a comparison against a human baseline.",
+    "after_heading": "What metered AI credits mean for the budget conversation",
+    "bytes": 51658
+  },
+  {
+    "kind": "quote",
+    "file": "04-quote.webp",
+    "alt": "Quote from Andrea Piras: a buyer who gets three AI-drafted win-back emails notices the one that reads like a real person wrote it.",
+    "after_heading": "What this means for how a sales team actually differentiates",
+    "bytes": 42272
+  },
+  {
+    "kind": "framework",
+    "file": "05-framework.webp",
+    "alt": "A four-step filter for vendor AI growth claims: growth is not outcome, check the conditions, test one bottleneck, invest in the human half.",
+    "after_heading": "How to respond without over-reacting to one report",
+    "bytes": 55560
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63038
+  }
+]
