@@ -99,7 +99,8 @@ python3 tools/insert.py article.md blog/<slug> <slug> $SHA > article_with_visual
 - URLs are pinned to the commit SHA, so the CDN never serves a stale file: `https://cdn.jsdelivr.net/gh/aisocialsprint/socialsprint-assets@<SHA>/blog/<slug>/<file>`.
 - **Cover image URL** = that URL for `hero.jpg`. Use it in both the Notion Cover Image field and `cover_image_url`.
 - `insert.py` exits with an error if an `after_heading` is not found; fix the spec, never drop the visual silently.
-- The article body passed to Notion and to `create_blog_draft` is `article_with_visuals.md`.
+- The article body passed to `create_blog_draft` is `article_with_visuals.md`.
+- For Notion, build a second copy with `--notion` (same command plus `--notion`, output `article_notion.md`). Notion rejects linked images, so in that copy the end card is a plain image followed by a link line. Every image must be its own block with a blank line before and after.
 
 ## 7. Report
 

@@ -1,6 +1,7 @@
 """Insert kit visuals into an article's markdown.
 
-Usage: python3 tools/insert.py article.md OUTDIR SLUG COMMIT_SHA > article_with_visuals.md
+Usage: python3 tools/insert.py article.md OUTDIR SLUG COMMIT_SHA [--notion] > article_with_visuals.md
+Use --notion for the Notion copy: Notion rejects linked images, so the end card becomes an image plus a link line.
 Each visual goes after the first paragraph that follows its `after_heading` H2
 (matched case-insensitively, ignoring punctuation). The analyser card goes at
 the very end as a linked image. The hero is NOT inserted: it is the cover_image_url.
@@ -13,7 +14,7 @@ REF = 'main'  # set to the commit SHA that added the files, so the CDN can never
 def url(slug, f): return f'https://cdn.jsdelivr.net/gh/{REPO}@{REF}/blog/{slug}/{f}'
 def norm(s): return re.sub(r'[^a-z0-9 ]', '', s.lower()).strip()
 
-def insert(md, man, slug):
+def insert(md, man, slug, notion=False):
     lines = md.split('\n'); missing = []
     for v in man:
         if v['kind'] in ('hero', 'analyser'): continue
@@ -29,10 +30,14 @@ def insert(md, man, slug):
     out = '\n'.join(lines).rstrip()
     for v in man:
         if v['kind'] == 'analyser':
-            out += f'\n\n[![{v["alt"]}]({url(slug, v["file"])})]({v["link"]})\n'
+            if notion:   # Notion rejects linked images: plain image block + a link line
+                out += f'\n\n![{v["alt"]}]({url(slug, v["file"])})\n\nEnd card links to: [socialsprint.co/profile-analyzer]({v["link"]})\n'
+            else:
+                out += f'\n\n[![{v["alt"]}]({url(slug, v["file"])})]({v["link"]})\n'
     return out
 
 if __name__ == '__main__':
     if len(sys.argv) > 4: REF = sys.argv[4]
+    notion = '--notion' in sys.argv
     md = open(sys.argv[1]).read(); man = json.load(open(f'{sys.argv[2]}/manifest.json'))
-    print(insert(md, man, sys.argv[3]))
+    print(insert(md, man, sys.argv[3], notion))
