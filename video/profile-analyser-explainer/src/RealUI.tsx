@@ -1,12 +1,13 @@
 // Variant B: same story, hook, music and CTA as Explainer.tsx, but the product shots are the real Profile Analyser UI.
 //  - Intro and step 1 use real 3x captures of the public page (public/real/, made by tools/capture_ui.js).
 //    The typing is a frame-by-frame capture of the real input, not an overlay.
-//  - Steps 2 and 3 rebuild Andrea's real report (checked 21 Nov 2026) in the site's own UI style
+//  - Step 2 rebuilds Andrea's real report (checked 21 Nov 2026) in the site's own UI style
 //    (Inter, same colours, labels and layout), so text stays sharp when zoomed on a phone.
+//  - Step 3 reuses variant A's design, filled with Andrea's real findings.
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame } from 'remotion';
 import {
-  A, BLUE, BLUE_L, BOX, Cta, Cue, GAPS, Gaps, Gauge, Headline, Layout, Meta, S, Scene, Shell, Sub, TOTAL,
+  A, AMBER, BLUE, BLUE_L, BOX, Cta, Cue, Fix, GAPS, Gaps, Gauge, Headline, Layout, Meta, S, Scene, Shell, Sub, TOTAL,
   URL_TEXT, Wordmark, ease, useSpring, useTall,
 } from './Explainer';
 
@@ -17,16 +18,17 @@ const UI = {
   high: '#EF4444', mid: '#EAB308', low: '#22C55E',
 };
 const OFFWHITE = '#F5F7FB';
+const AMBER_T = '#FEF3C7';
+// Variant B gives step 1 an extra second for human-paced typing and takes it from step 3 (all cuts stay on the beat).
+const SB = { ...S, score: S.score + 30, fix: S.fix + 30 };
 
 // Andrea's real report, 21 Nov 2026 (from the screenshots supplied)
 const REPORT = {
   headline: 'Growth Marketing Lead at Pelion | IoT connectivity across 600+ networks with one SIM | B2B demand generation and social selling',
   reach: '2,762 followers · 2,347 connections',
-  next: [
-    ['HIGH', UI.high, 'Publish an IoT demand generation series explaining your own campaign decisions and lessons, complementing the research snippets; invite relevant marketers to compare approaches.'],
-    ['MID', UI.mid, "Replace the About's generic opening with one LinkedIn Ads project, specifying your actions, timeframe and a publishable outcome rather than listing capabilities."],
-    ['LOW', UI.low, 'Revise the headline to name your intended professional audience, keeping Pelion and replacing some connectivity product detail with your specific marketing contribution.'],
-  ] as [string, string, string][],
+  // from the report's "One place you lose impact" and "Where you lose impact" sections
+  finding: "Headline foregrounds Pelion's offer over Andrea's.",
+  more: ['About opening uses generic growth language', 'Channel lists outweigh concrete project examples'],
 };
 
 const UICard: React.FC<{ style?: React.CSSProperties; children?: React.ReactNode }> = ({ style, children }) => (
@@ -79,19 +81,30 @@ const RealIntro: React.FC = () => {
 };
 
 // ---------- step 1: real input, typed for real ----------
-const TYPE_B = [12, 66], CLICK = 90;
+// Human-paced typing: about 7 keys a second, with short pauses after '.' and '/'. Frame of each keystroke:
+const KEY_FRAMES = (() => {
+  const gaps = [4, 3, 5, 4, 3, 4, 5, 3];
+  let t = 8; const out: number[] = [];
+  for (let i = 0; i < URL_TEXT.length; i++) {
+    out.push(t);
+    t += gaps[i % gaps.length] + ('./'.includes(URL_TEXT[i]) ? 6 : 0);
+  }
+  return out;
+})();
+const TYPED_AT = KEY_FRAMES[KEY_FRAMES.length - 1];
+const CLICK = TYPED_AT + 22;
 const FORM_W = 800, FORM_H = FORM_W * 586 / 1968, FORM_TOP = 290, FORM_LEFT = 10;
 const S_CLIP = FORM_W / 656; // css px of the capture -> box px
 const BTN = { x: FORM_LEFT + (403.6 + 90) * S_CLIP, y: FORM_TOP + 48 * S_CLIP, left: FORM_LEFT + 403.6 * S_CLIP, top: FORM_TOP + 24 * S_CLIP, w: 180.4 * S_CLIP, h: 48 * S_CLIP };
 const RealAdd: React.FC = () => {
   const f = useCurrentFrame();
-  const chars = Math.floor(interpolate(f, TYPE_B, [0, URL_TEXT.length], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
-  const hover = f >= 82;
+  const chars = KEY_FRAMES.filter((k) => k <= f).length;
+  const hover = f >= CLICK - 8;
   const src = hover ? 'real/form-hover.png' : `real/form-${String(chars).padStart(2, '0')}.png`;
   const c = useSpring(2);
-  const mv = ease(f, 68, 86);
+  const mv = ease(f, TYPED_AT + 2, CLICK - 4);
   const press = f >= CLICK && f < CLICK + 7;
-  const zoom = 1 + 0.16 * ease(f, 8, 100);
+  const zoom = 1 + 0.16 * ease(f, 8, TYPED_AT);
   return (
     <Layout
       copy={<>
@@ -105,13 +118,14 @@ const RealAdd: React.FC = () => {
         </div>
         {press && <div style={{ position: 'absolute', left: BTN.left, top: BTN.top, width: BTN.w, height: BTN.h, borderRadius: 12, background: 'rgba(15,23,42,.18)' }} />}
         <Ripple x={BTN.x} y={BTN.y} f={f} at={CLICK} />
-        <Cursor x={interpolate(mv, [0, 1], [BTN.x + 160, BTN.x + 10])} y={interpolate(mv, [0, 1], [BTN.y + 260, BTN.y + 6])} opacity={ease(f, 62, 70)} scale={press ? 0.9 : 1} />
+        <Cursor x={interpolate(mv, [0, 1], [BTN.x + 160, BTN.x + 10])} y={interpolate(mv, [0, 1], [BTN.y + 260, BTN.y + 6])} opacity={ease(f, TYPED_AT - 6, TYPED_AT + 2)} scale={press ? 0.9 : 1} />
       </div>}
     />
   );
 };
 
 // ---------- step 2: Andrea's real score ----------
+const FLAG = 136; // frame in step 2 when the weakest pillar turns amber
 const RealScore: React.FC = () => {
   const f = useCurrentFrame();
   const c = useSpring(2), g = useSpring(8), b = useSpring(66);
@@ -145,13 +159,19 @@ const RealScore: React.FC = () => {
         {A.pillars.map(([label, val], i) => {
           const s = spring({ frame: f - 72 - i * 8, fps: 30, config: { damping: 16 } });
           const p = ease(f, 76 + i * 8, 106 + i * 8);
-          return <UICard key={label} style={{ left: (i % 2) * 420, top: 548 + Math.floor(i / 2) * 136, width: 400, height: 116, padding: '22px 24px', borderRadius: 16, opacity: s, transform: `translateY(${(1 - s) * 20}px)` }}>
+          const low = val === Math.min(...A.pillars.map((x) => x[1]));
+          const flag = low ? ease(f, FLAG, FLAG + 12) : 0;
+          const pill = low ? spring({ frame: f - FLAG - 4, fps: 30, config: { damping: 11 } }) : 0;
+          const col = flag > 0.5 ? AMBER : UI.blue;
+          return <UICard key={label} style={{ left: (i % 2) * 420, top: 548 + Math.floor(i / 2) * 136, width: 400, height: 116, padding: '22px 24px', borderRadius: 16, opacity: s, transform: `translateY(${(1 - s) * 20}px)`, borderColor: flag > 0.5 ? '#FCD34D' : UI.border }}>
+            {low && <div style={{ position: 'absolute', right: 16, top: -20, transform: `scale(${pill})`, transformOrigin: 'right center', background: AMBER_T, border: `2px solid ${AMBER}`, color: '#92400E', borderRadius: 999, padding: '4px 16px', fontWeight: 600, fontSize: 20, whiteSpace: 'nowrap' }}>Biggest room to grow</div>}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <span style={{ fontSize: 22, color: UI.text }}>{label}</span>
-              <span style={{ fontWeight: 700, fontSize: 28, color: UI.blue }}>{Math.round(val * p)}/25</span>
+              <span style={{ fontWeight: 700, fontSize: 28, color: col }}>{Math.round(val * p)}/25</span>
             </div>
             <div style={{ marginTop: 18, height: 10, borderRadius: 5, background: UI.track, position: 'relative' }}>
               <div style={{ position: 'absolute', left: 0, top: 0, height: 10, borderRadius: 5, width: `${(val / 25) * 100 * p}%`, background: UI.blue }} />
+              <div style={{ position: 'absolute', left: 0, top: 0, height: 10, borderRadius: 5, width: `${(val / 25) * 100 * p}%`, background: AMBER, opacity: flag }} />
             </div>
           </UICard>;
         })}
@@ -160,82 +180,29 @@ const RealScore: React.FC = () => {
   );
 };
 
-// ---------- step 3: the ranked plan and the AI hand-off ----------
-const AI_CLICK = 118;
-const RealFix: React.FC = () => {
-  const f = useCurrentFrame();
-  const c = useSpring(2), ai = useSpring(64);
-  const btn = { x: 28 + 170, y: 560 + 178 + 30 };
-  const mv = ease(f, 88, 108);
-  return (
-    <Layout
-      copy={<>
-        <Meta>Step 3</Meta>
-        <Headline lines={['A plan ranked', 'by impact.']} accent={1} />
-        <Sub>Then take it to ChatGPT or Claude in one click.</Sub>
-      </>}
-      visual={<>
-        <UICard style={{ left: 0, top: 0, width: BOX, height: 530, padding: '26px 26px', opacity: c, transform: `translateY(${(1 - c) * 24}px)` }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <div style={{ width: 44, height: 44, borderRadius: 22, background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M13 2 L4 14 H11 L10 22 L20 9 H13 Z" fill="none" stroke={UI.blue} strokeWidth="2" strokeLinejoin="round" /></svg>
-            </div>
-            <div style={{ fontWeight: 600, fontSize: 28 }}>Next steps</div>
-          </div>
-          <div style={{ fontSize: 19, color: UI.muted, margin: '12px 0 16px' }}>Concrete actions, ordered by impact</div>
-          {REPORT.next.map(([tag, color, text], i) => {
-            const o = ease(f, 18 + i * 12, 30 + i * 12);
-            return <div key={tag} style={{ opacity: o, transform: `translateX(${(1 - o) * 24}px)`, display: 'flex', gap: 14, alignItems: 'flex-start', background: UI.row, border: `1.5px solid ${UI.border}`, borderRadius: 14, padding: '14px 16px', marginBottom: 12 }}>
-              <div style={{ flexShrink: 0, marginTop: 2, background: color, color: '#fff', fontWeight: 700, fontSize: 14, letterSpacing: 0.5, borderRadius: 999, padding: '4px 10px', minWidth: 44, textAlign: 'center' }}>{tag}</div>
-              <div style={{ fontSize: 19, lineHeight: 1.45, color: UI.text }}>{text}</div>
-            </div>;
-          })}
-        </UICard>
-        <UICard style={{ left: 0, top: 560, width: BOX, height: 250, padding: '26px 28px', opacity: ai, transform: `translateY(${(1 - ai) * 30}px)` }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <svg width="30" height="30" viewBox="0 0 24 24"><path d="M10 3 L11.8 8.2 L17 10 L11.8 11.8 L10 17 L8.2 11.8 L3 10 L8.2 8.2 Z M18 14 L18.9 16.1 L21 17 L18.9 17.9 L18 20 L17.1 17.9 L15 17 L17.1 16.1 Z" fill="none" stroke={UI.blue} strokeWidth="1.8" strokeLinejoin="round" /></svg>
-            <div style={{ fontWeight: 600, fontSize: 28 }}>Take action with AI</div>
-          </div>
-          <div style={{ fontSize: 19, lineHeight: 1.45, color: UI.muted, margin: '10px 0 22px' }}>Share your name, headline, score and findings with your chosen AI assistant to work on improvements.</div>
-          <div style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
-            <div style={{ width: 340, height: 60, borderRadius: 12, background: `linear-gradient(90deg, ${UI.blue}, #1D4ED8)`, color: '#fff', fontWeight: 500, fontSize: 21, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, filter: f >= 106 && f < AI_CLICK + 8 ? 'brightness(1.12)' : undefined }}>
-              Open in ChatGPT
-              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M14 4 H20 V10 M20 4 L11 13 M18 14 V20 H4 V6 H10" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            </div>
-            <div style={{ height: 60, borderRadius: 12, border: `1.5px solid ${UI.border}`, padding: '0 22px', fontWeight: 500, fontSize: 21, color: UI.text, display: 'flex', alignItems: 'center', gap: 10 }}>
-              <svg width="20" height="20" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke={UI.text} strokeWidth="2" /><path d="M16 8 V5 a1 1 0 0 0 -1 -1 H5 a1 1 0 0 0 -1 1 V15 a1 1 0 0 0 1 1 H8" fill="none" stroke={UI.text} strokeWidth="2" /></svg>
-              Copy prompt and open Claude
-            </div>
-          </div>
-        </UICard>
-        <Ripple x={btn.x} y={btn.y} f={f} at={AI_CLICK} />
-        <Cursor x={interpolate(mv, [0, 1], [btn.x + 240, btn.x])} y={interpolate(mv, [0, 1], [btn.y + 120, btn.y])} opacity={ease(f, 84, 92)} scale={f >= AI_CLICK && f < AI_CLICK + 6 ? 0.9 : 1} />
-      </>}
-    />
-  );
-};
+// ---------- step 3: variant A's design, Andrea's real findings ----------
+const Step3: React.FC = () => <Fix example={false} finding={REPORT.finding} listTitle="Where else you lose impact" items={REPORT.more} />;
 
 // ---------- timeline and sound ----------
 const SCENES_B: Scene[] = [
   [S.gaps, S.intro, Gaps, '#F8FAFC'], [S.intro, S.add, RealIntro, BLUE],
-  [S.add, S.score, RealAdd, OFFWHITE], [S.score, S.fix, RealScore, OFFWHITE],
-  [S.fix, S.cta, RealFix, OFFWHITE], [S.cta, TOTAL, Cta, BLUE],
+  [SB.add, SB.score, RealAdd, OFFWHITE], [SB.score, SB.fix, RealScore, OFFWHITE],
+  [SB.fix, SB.cta, Step3, OFFWHITE], [SB.cta, TOTAL, Cta, BLUE],
 ];
 const CUES_B: Cue[] = [
   ...GAPS.map((g, i): Cue => [S.gaps + g.at + 6, 'pop', 0.55, 1 + i * 0.12]),
   [S.intro - 8, 'whoosh', 0.35, 1],
   [S.intro + 10, 'whoosh', 0.18, 1.4],
-  ...Array.from({ length: URL_TEXT.length }, (_, i): Cue =>
-    [S.add + Math.ceil(TYPE_B[0] + ((TYPE_B[1] - TYPE_B[0]) * (i + 1)) / URL_TEXT.length), `key${(i * 3) % 4 + 1}`, 0.45, 0.96 + ((i * 7) % 5) * 0.02]),
-  [S.add + CLICK, 'click', 0.55, 1],
-  [S.score - 4, 'whoosh', 0.2, 1.2],
-  [S.score + 12, 'rise', 0.22, 1],
-  [S.score + 60, 'chime', 0.4, 1],
-  ...A.pillars.map((_, i): Cue => [S.score + 72 + i * 8, 'pop', 0.25, 1.3 + i * 0.1]),
-  [S.fix - 4, 'whoosh', 0.2, 1.2],
-  ...REPORT.next.map((_, i): Cue => [S.fix + 18 + i * 12, 'pop', 0.35, 1.25 - i * 0.12]),
-  [S.fix + 64, 'shimmer', 0.28, 1],
-  [S.fix + AI_CLICK, 'click', 0.55, 1],
+  ...KEY_FRAMES.map((k, i): Cue => [SB.add + k, `key${(i * 3) % 4 + 1}`, 0.38, 0.97 + ((i * 7) % 5) * 0.015]),
+  [SB.add + CLICK, 'click', 0.55, 1],
+  [SB.score - 4, 'whoosh', 0.2, 1.2],
+  [SB.score + 12, 'rise', 0.22, 1],
+  [SB.score + 60, 'chime', 0.4, 1],
+  ...A.pillars.map((_, i): Cue => [SB.score + 72 + i * 8, 'pop', 0.25, 1.3 + i * 0.1]),
+  [SB.score + FLAG, 'pop', 0.4, 0.7],
+  [SB.fix - 4, 'whoosh', 0.2, 1.2],
+  [SB.fix + 18, 'shimmer', 0.3, 1],
+  [SB.fix + 58, 'tick', 0.3, 1], [SB.fix + 68, 'tick', 0.3, 1.08],
   [S.cta - 4, 'whoosh', 0.3, 1],
   [S.cta + 30, 'pop', 0.4, 0.9],
   [S.cta + 112, 'click', 0.6, 1],

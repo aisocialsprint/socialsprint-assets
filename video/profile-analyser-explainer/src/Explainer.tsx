@@ -148,7 +148,7 @@ export const Gaps: React.FC = () => {
     <Layout
       copy={<>
         <Meta color={AMBER}>People check your profile first</Meta>
-        <Headline lines={['Small gaps', 'quietly cost', 'you replies.']} accent={2} accentColor={AMBER} />
+        <Headline lines={['Small gaps', 'quietly cost you', 'opportunities.']} accent={2} accentColor={AMBER} />
         <Sub delay={30}>And they are hard to spot from the inside.</Sub>
       </>}
       visual={<>
@@ -288,7 +288,10 @@ const ScoreBreakdown: React.FC = () => {
 };
 
 const NEXT = ['Add a clear call to action to your About section', 'Feature one post that shows your best work', 'Reply to comments within a day'];
-const Fix: React.FC = () => {
+// Step 3. Variant A shows illustrative content with an "Example report" chip; variant B passes Andrea's real findings.
+export const Fix: React.FC<{ example?: boolean; finding?: string; listTitle?: string; items?: string[] }> = ({
+  example = true, finding = `${NEXT[0]}.`, listTitle = 'Next steps', items = NEXT.slice(1),
+}) => {
   const f = useCurrentFrame();
   const c = useSpring(4);
   const unblur = ease(f, 18, 42);
@@ -300,19 +303,19 @@ const Fix: React.FC = () => {
         <Sub>Missing elements, critical gaps and next steps, in plain English.</Sub>
       </>}
       visual={<>
-        <ExampleChip />
+        {example && <ExampleChip />}
         <Card style={{ left: 40, top: 70, width: 740, height: 300, padding: '40px 44px', overflow: 'hidden', opacity: c, transform: `translateY(${(1 - c) * 40}px)` }}>
           <div style={{ position: 'absolute', left: 0, top: 0, width: 10, height: '100%', background: BLUE }} />
           <div style={{ fontFamily: I, fontWeight: 600, fontSize: 28, color: BLUE }}>One place you lose impact</div>
           <div style={{ position: 'relative', marginTop: 26, height: 150 }}>
             <div style={{ position: 'absolute', inset: 0, filter: `blur(${(1 - unblur) * 8}px)`, opacity: 0.25 + 0.75 * unblur, fontFamily: P, fontWeight: 700, fontSize: 40, lineHeight: 1.3, color: DARK }}>
-              {NEXT[0]}.
+              {finding}
             </div>
           </div>
         </Card>
         <Card style={{ left: 40, top: 410, width: 740, height: 360, padding: '36px 44px', opacity: ease(f, 46, 56) }}>
-          <div style={{ fontFamily: I, fontWeight: 600, fontSize: 28, color: MUTED, marginBottom: 20 }}>Next steps</div>
-          {NEXT.slice(1).map((n, i) => {
+          <div style={{ fontFamily: I, fontWeight: 600, fontSize: 28, color: MUTED, marginBottom: 20 }}>{listTitle}</div>
+          {items.map((n, i) => {
             const o = ease(f, 58 + i * 10, 68 + i * 10);
             return <div key={n} style={{ opacity: o, transform: `translateX(${(1 - o) * 30}px)`, display: 'flex', alignItems: 'center', gap: 20, height: 92, borderBottom: `2px solid ${TRACK}` }}>
               <div style={{ width: 40, height: 40, borderRadius: 8, border: `3px solid ${BLUE}`, flexShrink: 0 }} />
