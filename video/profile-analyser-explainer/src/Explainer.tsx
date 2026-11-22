@@ -18,9 +18,9 @@ const A = {
 };
 
 export const FPS = 30;
-// scene starts (frames). 60 s total.
-const S = { hook: 0, gaps: 180, intro: 390, add: 570, score: 840, pillars: 1080, fix: 1320, cta: 1560 };
-export const TOTAL = 1800;
+// scene starts (frames). 30 s total.
+const S = { gaps: 0, intro: 150, add: 240, score: 375, fix: 555, cta: 705 };
+export const TOTAL = 900;
 
 // ---------- fonts ----------
 const FONT_FILES: [string, string, string][] = [
@@ -133,43 +133,19 @@ const ProfileMock: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
 );
 
 // ---------- scenes ----------
-const Hook: React.FC = () => {
-  const f = useCurrentFrame();
-  const card = useSpring(8, 20);
-  const look = ease(f, 60, 110); // magnifier sweep
-  return (
-    <Layout
-      copy={<>
-        <Meta>LinkedIn, before the first reply</Meta>
-        <Headline lines={['Buyers check', 'your profile', 'before they reply.']} accent={1} />
-        <Sub delay={40}>So what are they finding?</Sub>
-      </>}
-      visual={<div style={{ opacity: card, transform: `scale(${0.9 + 0.1 * card})`, width: BOX, height: BOX, position: 'relative' }}>
-        <ProfileMock />
-        <svg style={{ position: 'absolute', left: 0, top: 0 }} width={BOX} height={BOX}>
-          <g transform={`translate(${interpolate(look, [0, 1], [560, 300])}, ${interpolate(look, [0, 1], [620, 330])})`} opacity={ease(f, 50, 62)}>
-            <circle r="70" fill="rgba(239,246,255,.55)" stroke={BLUE} strokeWidth="12" />
-            <path d="M50 50 L110 110" stroke={BLUE} strokeWidth="18" strokeLinecap="round" />
-          </g>
-        </svg>
-      </div>}
-    />
-  );
-};
-
 const GAPS = [
-  { label: 'Vague headline', y: SECTIONS[0].y + 6, at: 40 },
-  { label: 'Thin About section', y: SECTIONS[1].y + 30, at: 70 },
-  { label: 'No recent posts', y: SECTIONS[3].y + 30, at: 100 },
+  { label: 'Vague headline', y: SECTIONS[0].y + 6, at: 24 },
+  { label: 'Thin About section', y: SECTIONS[1].y + 30, at: 40 },
+  { label: 'No recent posts', y: SECTIONS[3].y + 30, at: 56 },
 ];
 const Gaps: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <Layout
       copy={<>
-        <Meta color={AMBER}>The problem</Meta>
+        <Meta color={AMBER}>Buyers check your profile first</Meta>
         <Headline lines={['Small gaps', 'quietly cost', 'you replies.']} accent={2} accentColor={AMBER} />
-        <Sub delay={40}>And they are hard to spot from the inside.</Sub>
+        <Sub delay={30}>And they are hard to spot from the inside.</Sub>
       </>}
       visual={<>
         <ProfileMock>
@@ -209,9 +185,9 @@ const URL_TEXT = 'linkedin.com/in/your-name';
 const ITEMS = ['Headline', 'About', 'Experience', 'Skills', 'Activity'];
 const AddProfile: React.FC = () => {
   const f = useCurrentFrame();
-  const chars = Math.floor(interpolate(f, [30, 80], [0, URL_TEXT.length], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
-  const press = f >= 92 && f < 100 ? 0.95 : 1;
-  const scan = ease(f, 105, 225);
+  const chars = Math.floor(interpolate(f, [10, 42], [0, URL_TEXT.length], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
+  const press = f >= 48 && f < 56 ? 0.95 : 1;
+  const scan = ease(f, 58, 118);
   const caret = Math.floor(f / 15) % 2 === 0 && chars < URL_TEXT.length;
   return (
     <Layout
@@ -235,7 +211,7 @@ const AddProfile: React.FC = () => {
           <div style={{ position: 'absolute', left: 40, top: 92, width: 660 * scan, height: 10, borderRadius: 5, background: BLUE }} />
           {ITEMS.map((it, i) => {
             const done = scan > (i + 1) / (ITEMS.length + 0.5);
-            const o = ease(f, 100 + i * 6, 112 + i * 6);
+            const o = ease(f, 54 + i * 5, 64 + i * 5);
             return <div key={it} style={{ opacity: o, display: 'flex', alignItems: 'center', gap: 22, height: 74, borderBottom: i < ITEMS.length - 1 ? `2px solid ${TRACK}` : 'none' }}>
               <div style={{ width: 44, height: 44, borderRadius: 22, background: done ? GREEN : TRACK, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {done && <svg width="24" height="24" viewBox="0 0 24 24"><path d="M5 12.5 L10 17 L19 7" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" /></svg>}
@@ -259,73 +235,44 @@ const Gauge: React.FC<{ value: number; r?: number; stroke?: number }> = ({ value
   </svg>;
 };
 
-const NameCard: React.FC<{ delay: number }> = ({ delay }) => {
-  const s = useSpring(delay);
-  return <Card style={{ left: 40, top: 40, width: 740, height: 150, display: 'flex', alignItems: 'center', gap: 28, padding: '0 36px', opacity: s, transform: `translateY(${(1 - s) * 30}px)` }}>
-    <Img src={staticFile('headshot.png')} style={{ width: 96, height: 96, borderRadius: 48 }} />
-    <div>
-      <div style={{ fontFamily: P, fontWeight: 700, fontSize: 36, color: DARK }}>{A.name}</div>
-      <div style={{ fontFamily: I, fontSize: 26, color: MUTED, marginTop: 4 }}>{A.role}</div>
-    </div>
-  </Card>;
-};
-
-const Score: React.FC = () => {
+const ScoreBreakdown: React.FC = () => {
   const f = useCurrentFrame();
-  const c = useSpring(14);
-  const v = A.score * ease(f, 26, 100);
-  const badge = spring({ frame: f - 104, fps: FPS, config: { damping: 10 } });
+  const c = useSpring(4), d = useSpring(56);
+  const v = A.score * ease(f, 12, 60);
+  const badge = spring({ frame: f - 60, fps: FPS, config: { damping: 10 } });
+  const lowVal = Math.min(...A.pillars.map((x) => x[1]));
   return (
     <Layout
       copy={<>
         <Meta>Step 2</Meta>
-        <Headline lines={['Get one', 'clear score.']} accent={1} />
-        <Sub>Out of 100, with a band that tells you where you stand.</Sub>
+        <Headline lines={['Get your score', 'out of 100.']} accent={1} />
+        <Sub>Then see where the points go: Profile, Network, Posts and Best practices.</Sub>
       </>}
       visual={<>
         <ExampleChip />
-        <NameCard delay={4} />
-        <Card style={{ left: 40, top: 230, width: 740, height: 550, opacity: c, transform: `translateY(${(1 - c) * 40}px)`, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 40 }}>
-          <div style={{ alignSelf: 'flex-start', marginLeft: 40, fontFamily: P, fontWeight: 700, fontSize: 30, color: DARK }}>Overall score</div>
-          <div style={{ position: 'relative', marginTop: 30 }}>
-            <Gauge value={v} />
-            <div style={{ position: 'absolute', left: 0, right: 0, top: 120, textAlign: 'center', fontFamily: P, fontWeight: 900, fontSize: 150, color: BLUE, letterSpacing: -4, lineHeight: 1 }}>{Math.round(v)}</div>
+        <Card style={{ left: 40, top: 40, width: 740, height: 330, padding: '30px 40px', opacity: c, transform: `translateY(${(1 - c) * 40}px)`, display: 'flex', alignItems: 'center', gap: 40 }}>
+          <div style={{ position: 'relative' }}>
+            <Gauge value={v} r={130} stroke={26} />
+            <div style={{ position: 'absolute', left: 0, right: 0, top: 70, textAlign: 'center', fontFamily: P, fontWeight: 900, fontSize: 110, color: BLUE, letterSpacing: -3, lineHeight: 1 }}>{Math.round(v)}</div>
           </div>
-          <div style={{ fontFamily: I, fontSize: 30, color: MUTED, marginTop: -6 }}>/ 100</div>
-          <div style={{ marginTop: 20, transform: `scale(${badge})`, border: `3px solid ${BLUE_L}`, borderRadius: 30, padding: '8px 34px', fontFamily: P, fontWeight: 700, fontSize: 30, color: BLUE }}>{A.band}</div>
+          <div>
+            <div style={{ fontFamily: P, fontWeight: 700, fontSize: 30, color: DARK }}>Overall score</div>
+            <div style={{ fontFamily: I, fontSize: 28, color: MUTED, marginTop: 6 }}>{A.name}</div>
+            <div style={{ display: 'inline-block', marginTop: 22, transform: `scale(${badge})`, transformOrigin: 'left center', border: `3px solid ${BLUE_L}`, borderRadius: 30, padding: '8px 30px', fontFamily: P, fontWeight: 700, fontSize: 30, color: BLUE }}>{A.band}</div>
+          </div>
         </Card>
-      </>}
-    />
-  );
-};
-
-const Pillars: React.FC = () => {
-  const f = useCurrentFrame();
-  const c = useSpring(4);
-  return (
-    <Layout
-      copy={<>
-        <Meta>Step 3</Meta>
-        <Headline lines={['See where', 'the points go.']} accent={1} />
-        <Sub>Profile, Network, Posts and Best practices, each scored out of 25.</Sub>
-      </>}
-      visual={<>
-        <ExampleChip />
-        <Card style={{ left: 40, top: 70, width: 740, height: 700, padding: '48px 50px', opacity: c, transform: `translateY(${(1 - c) * 40}px)` }}>
-          <div style={{ fontFamily: P, fontWeight: 700, fontSize: 34, color: DARK, marginBottom: 30 }}>Score breakdown</div>
+        <Card style={{ left: 40, top: 395, width: 740, height: 410, padding: '32px 44px 0', opacity: d, transform: `translateY(${(1 - d) * 40}px)` }}>
           {A.pillars.map(([label, val], i) => {
-            const p = ease(f, 24 + i * 16, 64 + i * 16);
-            const low = val === Math.min(...A.pillars.map((x) => x[1]));
-            const flag = low ? ease(f, 140, 155) : 0;
-            return <div key={label} style={{ marginBottom: 44 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 32, marginBottom: 16 }}>
-                <span style={{ fontFamily: I, color: SLATE }}>{label}</span>
+            const p = ease(f, 66 + i * 10, 96 + i * 10);
+            const flag = val === lowVal ? ease(f, 120, 132) : 0;
+            return <div key={label} style={{ marginBottom: i < 3 ? 26 : 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 28, marginBottom: 12 }}>
+                <span style={{ fontFamily: I, color: SLATE }}>{label}{flag > 0 && <span style={{ opacity: flag, fontWeight: 600, color: AMBER }}>{" \u00b7 "}Biggest room to grow</span>}</span>
                 <span style={{ fontFamily: P, fontWeight: 700, color: flag ? AMBER : BLUE }}>{Math.round(val * p)}/25</span>
               </div>
-              <div style={{ position: 'relative', height: 18, borderRadius: 9, background: TRACK }}>
-                <div style={{ position: 'absolute', left: 0, top: 0, height: 18, borderRadius: 9, width: `${(val / 25) * 100 * p}%`, background: flag ? AMBER : BLUE }} />
+              <div style={{ position: 'relative', height: 16, borderRadius: 8, background: TRACK }}>
+                <div style={{ position: 'absolute', left: 0, top: 0, height: 16, borderRadius: 8, width: `${(val / 25) * 100 * p}%`, background: flag ? AMBER : BLUE }} />
               </div>
-              {low && <div style={{ opacity: flag, marginTop: 14, fontFamily: I, fontWeight: 600, fontSize: 26, color: AMBER }}>Biggest room to grow</div>}
             </div>;
           })}
         </Card>
@@ -338,11 +285,11 @@ const NEXT = ['Add a clear call to action to your About section', 'Feature one p
 const Fix: React.FC = () => {
   const f = useCurrentFrame();
   const c = useSpring(4);
-  const unblur = ease(f, 40, 70);
+  const unblur = ease(f, 18, 42);
   return (
     <Layout
       copy={<>
-        <Meta>Step 4</Meta>
+        <Meta>Step 3</Meta>
         <Headline lines={['Fix the first', 'thing that', 'matters.']} accent={2} />
         <Sub>Missing elements, critical gaps and next steps, in plain English.</Sub>
       </>}
@@ -357,16 +304,16 @@ const Fix: React.FC = () => {
             </div>
           </div>
         </Card>
-        <Card style={{ left: 40, top: 410, width: 740, height: 360, padding: '36px 44px', opacity: ease(f, 80, 92) }}>
+        <Card style={{ left: 40, top: 410, width: 740, height: 360, padding: '36px 44px', opacity: ease(f, 46, 56) }}>
           <div style={{ fontFamily: I, fontWeight: 600, fontSize: 28, color: MUTED, marginBottom: 20 }}>Next steps</div>
           {NEXT.slice(1).map((n, i) => {
-            const o = ease(f, 96 + i * 14, 108 + i * 14);
+            const o = ease(f, 58 + i * 10, 68 + i * 10);
             return <div key={n} style={{ opacity: o, transform: `translateX(${(1 - o) * 30}px)`, display: 'flex', alignItems: 'center', gap: 20, height: 92, borderBottom: `2px solid ${TRACK}` }}>
               <div style={{ width: 40, height: 40, borderRadius: 8, border: `3px solid ${BLUE}`, flexShrink: 0 }} />
               <div style={{ fontFamily: I, fontWeight: 500, fontSize: 28, color: SLATE }}>{n}</div>
             </div>;
           })}
-          <div style={{ opacity: ease(f, 130, 142), display: 'flex', alignItems: 'center', gap: 14, marginTop: 24, fontFamily: I, fontSize: 26, color: MUTED }}>
+          <div style={{ opacity: ease(f, 82, 92), display: 'flex', alignItems: 'center', gap: 14, marginTop: 24, fontFamily: I, fontSize: 26, color: MUTED }}>
             <svg width="22" height="26" viewBox="0 0 22 26"><rect x="1" y="11" width="20" height="14" rx="3" fill={MUTED} /><path d="M5 11 V7 a6 6 0 0 1 12 0 V11" fill="none" stroke={MUTED} strokeWidth="3" /></svg>
             More in the full report
           </div>
@@ -408,8 +355,8 @@ const Cta: React.FC = () => {
 
 // ---------- timeline ----------
 const SCENES: [number, number, React.FC, string][] = [
-  [S.hook, S.gaps, Hook, OFF], [S.gaps, S.intro, Gaps, OFF], [S.intro, S.add, Intro, BLUE],
-  [S.add, S.score, AddProfile, BLUE_T], [S.score, S.pillars, Score, BLUE_T], [S.pillars, S.fix, Pillars, BLUE_T],
+  [S.gaps, S.intro, Gaps, OFF], [S.intro, S.add, Intro, BLUE],
+  [S.add, S.score, AddProfile, BLUE_T], [S.score, S.fix, ScoreBreakdown, BLUE_T],
   [S.fix, S.cta, Fix, BLUE_T], [S.cta, TOTAL, Cta, BLUE],
 ];
 
