@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  AbsoluteFill, Easing, Img, Sequence, continueRender, delayRender, interpolate,
+  AbsoluteFill, Audio, Easing, Img, Sequence, continueRender, delayRender, interpolate,
   spring, staticFile, useCurrentFrame, useVideoConfig,
 } from 'remotion';
 import { WORDMARK } from './wordmark';
@@ -360,6 +360,50 @@ const SCENES: [number, number, React.FC, string][] = [
   [S.fix, S.cta, Fix, BLUE_T], [S.cta, TOTAL, Cta, BLUE],
 ];
 
+// ---------- sound ----------
+// Each cue is [global frame, file, volume, playbackRate]. Frames mirror the animation timings above.
+const firstFrame = (from: number, to: number, test: (f: number) => boolean) => {
+  for (let f = from; f <= to; f++) if (test(f)) return f;
+  return to;
+};
+const CUES: [number, string, number, number][] = [
+  // hook: one pop per warning tag
+  ...GAPS.map((g, i): [number, string, number, number] => [S.gaps + g.at + 6, 'pop', 0.55, 1 + i * 0.12]),
+  [S.intro - 8, 'whoosh', 0.35, 1],
+  // step 1: typing, button, one tick per section read
+  ...Array.from({ length: URL_TEXT.length }, (_, i): [number, string, number, number] =>
+    [S.add + Math.ceil(10 + (32 * (i + 1)) / URL_TEXT.length), 'key', 0.22, 0.85 + ((i * 7) % 5) * 0.08]),
+  [S.add + 48, 'click', 0.5, 1],
+  ...ITEMS.map((_, i): [number, string, number, number] =>
+    [S.add + firstFrame(58, 135, (f) => ease(f, 58, 118) > (i + 1) / (ITEMS.length + 0.5)), 'tick', 0.32, 1 + i * 0.06]),
+  // step 2: count-up, band badge, pillar bars, weakest pillar
+  [S.score - 4, 'whoosh', 0.2, 1.2],
+  [S.score + 12, 'rise', 0.22, 1],
+  [S.score + 60, 'chime', 0.4, 1],
+  ...A.pillars.map((_, i): [number, string, number, number] => [S.score + 66 + i * 10, 'pop', 0.25, 1.3 + i * 0.1]),
+  [S.score + 120, 'pop', 0.4, 0.7],
+  // step 3: fix comes into focus, next steps appear
+  [S.fix - 4, 'whoosh', 0.2, 1.2],
+  [S.fix + 18, 'shimmer', 0.3, 1],
+  [S.fix + 58, 'tick', 0.3, 1], [S.fix + 68, 'tick', 0.3, 1.08],
+  // CTA: button lands, cursor clicks
+  [S.cta - 4, 'whoosh', 0.3, 1],
+  [S.cta + 30, 'pop', 0.4, 0.9],
+  [S.cta + 112, 'click', 0.6, 1],
+  [S.cta + 114, 'chime', 0.35, 0.75],
+];
+
+const Soundtrack: React.FC = () => (
+  <>
+    <Audio src={staticFile('audio/music.mp3')} volume={(f) => interpolate(f, [0, 12, TOTAL - 30, TOTAL], [0, 0.42, 0.42, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />
+    {CUES.map(([from, file, volume, rate], i) => (
+      <Sequence key={i} from={from} durationInFrames={60} layout="none">
+        <Audio src={staticFile(`audio/${file}.wav`)} volume={volume} playbackRate={rate} />
+      </Sequence>
+    ))}
+  </>
+);
+
 export const Explainer: React.FC = () => {
   useFonts();
   const f = useCurrentFrame();
@@ -368,6 +412,7 @@ export const Explainer: React.FC = () => {
   const onLight = !(f >= S.intro && f < S.add) && f < S.cta;
   return (
     <AbsoluteFill style={{ background: OFF }}>
+      <Soundtrack />
       {SCENES.map(([from, to, C, bg]) => (
         <Sequence key={from} from={from} durationInFrames={to - from}>
           <SceneFade dur={to - from} bg={bg}><C /></SceneFade>
