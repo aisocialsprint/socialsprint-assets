@@ -6,28 +6,28 @@ import {
 import { WORDMARK } from './wordmark';
 
 // ---------- brand (matches tools/kit.py) ----------
-const BLUE = '#2563EB', DARK = '#0F172A', SLATE = '#334155', MUTED = '#64748B';
-const BLUE_L = '#BFDBFE', BLUE_T = '#EFF6FF', OFF = '#F8FAFC', LINE = '#E2E8F0', TRACK = '#F1F5F9';
-const AMBER = '#D97706', AMBER_T = '#FEF3C7', GREEN = '#10B981';
-const P = 'Poppins', I = 'Inter';
+export const BLUE = '#2563EB', DARK = '#0F172A', SLATE = '#334155', MUTED = '#64748B';
+export const BLUE_L = '#BFDBFE', BLUE_T = '#EFF6FF', OFF = '#F8FAFC', LINE = '#E2E8F0', TRACK = '#F1F5F9';
+export const AMBER = '#D97706', AMBER_T = '#FEF3C7', GREEN = '#10B981';
+export const P = 'Poppins', I = 'Inter';
 
 // Andrea's real scan, same numbers as the blog end card (tools/kit.py ANALYSER)
-const A = {
+export const A = {
   score: 73, band: 'Strong', name: 'Andrea Piras', role: 'Growth Marketing Lead at Pelion',
   pillars: [['Profile', 19], ['Network', 19], ['Posts', 25], ['Best practices', 10]] as [string, number][],
 };
 
 export const FPS = 30;
 // scene starts (frames). 30 s total.
-const S = { gaps: 0, intro: 150, add: 240, score: 375, fix: 555, cta: 705 };
+export const S = { gaps: 0, intro: 150, add: 240, score: 375, fix: 555, cta: 705 };
 export const TOTAL = 900;
 
 // ---------- fonts ----------
 const FONT_FILES: [string, string, string][] = [
   [P, '700', 'Poppins-Bold.ttf'], [P, '800', 'Poppins-ExtraBold.ttf'], [P, '900', 'Poppins-Black.ttf'],
-  [I, '400', 'Inter-Regular.otf'], [I, '500', 'Inter-Medium.otf'], [I, '600', 'Inter-SemiBold.otf'],
+  [I, '400', 'Inter-Regular.otf'], [I, '500', 'Inter-Medium.otf'], [I, '600', 'Inter-SemiBold.otf'], [I, '700', 'Inter-Bold.otf'],
 ];
-const useFonts = () => {
+export const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
   useEffect(() => {
     Promise.all(FONT_FILES.map(([fam, weight, file]) => {
@@ -38,31 +38,31 @@ const useFonts = () => {
 };
 
 // ---------- motion helpers ----------
-const useSpring = (delay = 0, damping = 18) => {
+export const useSpring = (delay = 0, damping = 18) => {
   const frame = useCurrentFrame(); const { fps } = useVideoConfig();
   return spring({ frame: frame - delay, fps, config: { damping, mass: 0.8 } });
 };
-const ease = (f: number, a: number, b: number) =>
+export const ease = (f: number, a: number, b: number) =>
   interpolate(f, [a, b], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.4, 0, 0.2, 1) });
 
-const useTall = () => { const { width, height } = useVideoConfig(); return height > width; };
+export const useTall = () => { const { width, height } = useVideoConfig(); return height > width; };
 
 // Fades a scene in and out inside its Sequence
-const SceneFade: React.FC<{ dur: number; children: React.ReactNode; bg: string }> = ({ dur, children, bg }) => {
+export const SceneFade: React.FC<{ dur: number; children: React.ReactNode; bg: string }> = ({ dur, children, bg }) => {
   const f = useCurrentFrame();
   const o = interpolate(f, [0, 6, dur - 6, dur], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   return <AbsoluteFill style={{ background: bg }}><AbsoluteFill style={{ opacity: o }}>{children}</AbsoluteFill></AbsoluteFill>;
 };
 
-const Rise: React.FC<{ delay: number; children: React.ReactNode; dist?: number; style?: React.CSSProperties }> = ({ delay, children, dist = 40, style }) => {
+export const Rise: React.FC<{ delay: number; children: React.ReactNode; dist?: number; style?: React.CSSProperties }> = ({ delay, children, dist = 40, style }) => {
   const s = useSpring(delay);
   return <div style={{ opacity: s, transform: `translateY(${(1 - s) * dist}px)`, ...style }}>{children}</div>;
 };
 
 // ---------- layout ----------
 // Wide: copy left, visual right. Tall: copy top, visual below. Visuals are drawn in an 820 x 820 box and scaled.
-const BOX = 820;
-const Layout: React.FC<{ copy: React.ReactNode; visual: React.ReactNode; dark?: boolean }> = ({ copy, visual }) => {
+export const BOX = 820;
+export const Layout: React.FC<{ copy: React.ReactNode; visual: React.ReactNode; dark?: boolean }> = ({ copy, visual }) => {
   const tall = useTall(); const { width, height } = useVideoConfig();
   const vw = tall ? width : width * 0.52, vh = tall ? height * 0.6 : height;
   const scale = Math.min(vw / BOX, vh / BOX) * (tall ? 0.92 : 0.86);
@@ -80,27 +80,27 @@ const Layout: React.FC<{ copy: React.ReactNode; visual: React.ReactNode; dark?: 
   );
 };
 
-const Meta: React.FC<{ children: string; color?: string; delay?: number }> = ({ children, color = BLUE, delay = 0 }) => {
+export const Meta: React.FC<{ children: string; color?: string; delay?: number }> = ({ children, color = BLUE, delay = 0 }) => {
   const tall = useTall();
   return <Rise delay={delay} dist={20}><div style={{ fontFamily: I, fontWeight: 600, fontSize: tall ? 30 : 24, letterSpacing: 5, color, textTransform: 'uppercase', marginBottom: tall ? 28 : 24 }}>{children}</div></Rise>;
 };
-const Headline: React.FC<{ lines: string[]; delay?: number; color?: string; accent?: number; accentColor?: string }> = ({ lines, delay = 4, color = DARK, accent = -1, accentColor = BLUE }) => {
+export const Headline: React.FC<{ lines: string[]; delay?: number; color?: string; accent?: number; accentColor?: string }> = ({ lines, delay = 4, color = DARK, accent = -1, accentColor = BLUE }) => {
   const tall = useTall();
   return <div>{lines.map((l, i) => (
     <Rise key={i} delay={delay + i * 5}><div style={{ fontFamily: P, fontWeight: 800, fontSize: tall ? 84 : 76, lineHeight: 1.12, letterSpacing: -1.5, color: i === accent ? accentColor : color }}>{l}</div></Rise>
   ))}</div>;
 };
-const Sub: React.FC<{ children: string; delay?: number; color?: string }> = ({ children, delay = 22, color = SLATE }) => {
+export const Sub: React.FC<{ children: string; delay?: number; color?: string }> = ({ children, delay = 22, color = SLATE }) => {
   const tall = useTall();
   return <Rise delay={delay} dist={20}><div style={{ fontFamily: I, fontSize: tall ? 40 : 32, lineHeight: 1.45, color, marginTop: tall ? 36 : 32, maxWidth: tall ? 900 : 720, textWrap: 'balance' } as React.CSSProperties}>{children}</div></Rise>;
 };
 
-const Wordmark: React.FC<{ width: number; white?: boolean }> = ({ width, white }) => {
+export const Wordmark: React.FC<{ width: number; white?: boolean }> = ({ width, white }) => {
   const p = WORDMARK.replace(/var\(--wmt,#00110b\)/g, white ? '#fff' : '#00110b').replace(/var\(--wmi,#2563EB\)/g, white ? '#fff' : BLUE);
   return <svg width={width} height={width * 80 / 466} viewBox="18 207 466 80" dangerouslySetInnerHTML={{ __html: p }} />;
 };
 
-const Card: React.FC<{ style?: React.CSSProperties; children?: React.ReactNode; shadow?: string }> = ({ style, children, shadow = 'rgba(15,23,42,.10)' }) => (
+export const Card: React.FC<{ style?: React.CSSProperties; children?: React.ReactNode; shadow?: string }> = ({ style, children, shadow = 'rgba(15,23,42,.10)' }) => (
   <div style={{ position: 'absolute', background: '#fff', borderRadius: 24, boxShadow: `0 16px 40px ${shadow}, 0 2px 6px rgba(15,23,42,.06)`, boxSizing: 'border-box', ...style }}>{children}</div>
 );
 const Bar: React.FC<{ w: number | string; h?: number; c?: string; style?: React.CSSProperties }> = ({ w, h = 16, c = LINE, style }) =>
@@ -137,12 +137,12 @@ const ProfileMock: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
 // headline block = two 16px bars + 12px gap (44px); a titled section = 30px title + 14px gap + 44px of bars (88px).
 const PAD = 12, HEADLINE_H = 44, SECTION_H = 88, CARD_TOP = 30, PILL_H = 60;
 const gapBox = (y: number, h: number) => ({ top: y - PAD, h: h + 2 * PAD });
-const GAPS = [
+export const GAPS = [
   { label: 'Vague headline', ...gapBox(SECTIONS[0].y, HEADLINE_H), at: 24 },
   { label: 'Thin About section', ...gapBox(SECTIONS[1].y, SECTION_H), at: 40 },
   { label: 'No recent posts', ...gapBox(SECTIONS[3].y, SECTION_H), at: 56 },
 ];
-const Gaps: React.FC = () => {
+export const Gaps: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <Layout
@@ -169,7 +169,7 @@ const Gaps: React.FC = () => {
   );
 };
 
-const Intro: React.FC = () => {
+export const Intro: React.FC = () => {
   const tall = useTall();
   const s = useSpring(4, 14), t = useSpring(14), u = useSpring(30);
   return (
@@ -185,9 +185,9 @@ const Intro: React.FC = () => {
   );
 };
 
-const URL_TEXT = 'linkedin.com/in/your-name';
+export const URL_TEXT = 'linkedin.com/in/your-name';
 // typing runs from TYPE[0] to TYPE[1] (frames into the scene); one keystroke sound per character
-const TYPE = [8, 50];
+export const TYPE = [8, 50];
 const ITEMS = ['Headline', 'About', 'Experience', 'Skills', 'Activity'];
 const AddProfile: React.FC = () => {
   const f = useCurrentFrame();
@@ -231,7 +231,7 @@ const AddProfile: React.FC = () => {
   );
 };
 
-const Gauge: React.FC<{ value: number; r?: number; stroke?: number }> = ({ value, r = 190, stroke = 34 }) => {
+export const Gauge: React.FC<{ value: number; r?: number; stroke?: number }> = ({ value, r = 190, stroke = 34 }) => {
   const cx = r + stroke, cy = r + stroke;
   const th = Math.PI * (1 - value / 100);
   const ex = cx + r * Math.cos(th), ey = cy - r * Math.sin(th);
@@ -329,7 +329,7 @@ const Fix: React.FC = () => {
   );
 };
 
-const Cta: React.FC = () => {
+export const Cta: React.FC = () => {
   const tall = useTall();
   const f = useCurrentFrame();
   const btn = useSpring(30, 12);
@@ -360,7 +360,9 @@ const Cta: React.FC = () => {
 };
 
 // ---------- timeline ----------
-const SCENES: [number, number, React.FC, string][] = [
+export type Scene = [number, number, React.FC, string];
+export type Cue = [number, string, number, number];
+const SCENES: Scene[] = [
   [S.gaps, S.intro, Gaps, OFF], [S.intro, S.add, Intro, BLUE],
   [S.add, S.score, AddProfile, BLUE_T], [S.score, S.fix, ScoreBreakdown, BLUE_T],
   [S.fix, S.cta, Fix, BLUE_T], [S.cta, TOTAL, Cta, BLUE],
@@ -368,11 +370,11 @@ const SCENES: [number, number, React.FC, string][] = [
 
 // ---------- sound ----------
 // Each cue is [global frame, file, volume, playbackRate]. Frames mirror the animation timings above.
-const firstFrame = (from: number, to: number, test: (f: number) => boolean) => {
+export const firstFrame = (from: number, to: number, test: (f: number) => boolean) => {
   for (let f = from; f <= to; f++) if (test(f)) return f;
   return to;
 };
-const CUES: [number, string, number, number][] = [
+const CUES: Cue[] = [
   // hook: one pop per warning tag
   ...GAPS.map((g, i): [number, string, number, number] => [S.gaps + g.at + 6, 'pop', 0.55, 1 + i * 0.12]),
   [S.intro - 8, 'whoosh', 0.35, 1],
@@ -399,10 +401,10 @@ const CUES: [number, string, number, number][] = [
   [S.cta + 114, 'chime', 0.35, 0.75],
 ];
 
-const Soundtrack: React.FC = () => (
+const Soundtrack: React.FC<{ cues: Cue[] }> = ({ cues }) => (
   <>
     <Audio src={staticFile('audio/music.mp3')} volume={(f) => interpolate(f, [0, 12, TOTAL - 30, TOTAL], [0, 0.42, 0.42, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />
-    {CUES.map(([from, file, volume, rate], i) => (
+    {cues.map(([from, file, volume, rate], i) => (
       <Sequence key={i} from={from} durationInFrames={60} layout="none">
         <Audio src={staticFile(`audio/${file}.wav`)} volume={volume} playbackRate={rate} />
       </Sequence>
@@ -410,7 +412,8 @@ const Soundtrack: React.FC = () => (
   </>
 );
 
-export const Explainer: React.FC = () => {
+// Shared frame: scenes, soundtrack, small logo on light scenes, progress line.
+export const Shell: React.FC<{ scenes: Scene[]; cues: Cue[] }> = ({ scenes, cues }) => {
   useFonts();
   const f = useCurrentFrame();
   const tall = useTall();
@@ -418,8 +421,8 @@ export const Explainer: React.FC = () => {
   const onLight = !(f >= S.intro && f < S.add) && f < S.cta;
   return (
     <AbsoluteFill style={{ background: OFF }}>
-      <Soundtrack />
-      {SCENES.map(([from, to, C, bg]) => (
+      <Soundtrack cues={cues} />
+      {scenes.map(([from, to, C, bg]) => (
         <Sequence key={from} from={from} durationInFrames={to - from}>
           <SceneFade dur={to - from} bg={bg}><C /></SceneFade>
         </Sequence>
@@ -429,3 +432,5 @@ export const Explainer: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+export const Explainer: React.FC = () => <Shell scenes={SCENES} cues={CUES} />;

@@ -4,7 +4,10 @@
   "scripts": {
     "studio": "remotion studio",
     "render:wide": "remotion render ExplainerWide out/profile-analyser-16x9.mp4",
-    "render:tall": "remotion render ExplainerTall out/profile-analyser-9x16.mp4"
+    "render:tall": "remotion render ExplainerTall out/profile-analyser-9x16.mp4",
+    "render:real-wide": "remotion render RealUIWide out/profile-analyser-realui-16x9.mp4",
+    "render:real-tall": "remotion render RealUITall out/profile-analyser-realui-9x16.mp4",
+    "capture:ui": "node tools/capture_ui.js public/real"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.300",

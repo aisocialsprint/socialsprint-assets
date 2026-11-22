@@ -21,6 +21,18 @@
 
 The score and pillars are Andrea's real scan (same as `ANALYSER` in `tools/kit.py`) and are labelled "Example report". The fix and next-step lines are illustrative.
 
+## Variant B: real product UI
+Same hook, timings, music and CTA as variant A; only the product shots change, so an A/B test isolates them.
+
+| composition | file |
+|---|---|
+| `RealUIWide` | `renders/profile-analyser-30s-realui-16x9.mp4` (+ `-silent`) |
+| `RealUITall` | `renders/profile-analyser-30s-realui-9x16.mp4` (+ `-silent`) |
+
+- Intro and step 1 use real 3x captures of socialsprint.co/profile-analyzer (`public/real/`, made by `npm run capture:ui`, which types into the real input frame by frame and never submits the form).
+- Steps 2 and 3 rebuild Andrea's real report (checked 21 Nov 2026) in the site's UI style (Inter, same colours, labels and layout) so text stays sharp when zoomed. Data: score 73 Strong, the four pillars, the three ranked next steps and the "Take action with AI" panel.
+- Source: `src/RealUI.tsx`. Re-run the capture if the landing page changes.
+
 ## Audio
 Everything is synthesised by `tools/gen_audio.py` (numpy + ffmpeg), so there are no samples or licences involved:
 - `public/audio/music.mp3`: 30 s original bed at 120 BPM (one beat = 15 frames, so every scene cut lands on a beat). Pad and arp for the hook, riser into the intro at 4 s, drums and bass from 5 s, final chord at 28 s.
