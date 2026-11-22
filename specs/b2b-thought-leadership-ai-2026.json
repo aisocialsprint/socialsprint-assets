@@ -1,0 +1,60 @@
+{
+  "slug": "b2b-thought-leadership-ai-2026",
+  "title": "B2B Buyers Want More Thought Leadership as AI Spreads",
+  "hero": {
+    "metaphor": "waffle",
+    "pct": 82,
+    "caption": "of B2B buyers",
+    "value": "82%",
+    "label": "value thought leadership more as AI spreads",
+    "alt": "82% of B2B decision-makers say thought leadership is becoming more valuable as AI floods content with generic material. Source: Edelman/LinkedIn 2026 B2B Thought Leadership Impact Report."
+  },
+  "visuals": [
+    {
+      "type": "bars",
+      "after_heading": "What the Edelman and LinkedIn report actually found",
+      "meta": "Edelman/LinkedIn 2026 report",
+      "headline": "Weak thought leadership has a real cost",
+      "rows": [["Removed from consideration", 59], ["Shaped initial consideration", 48]],
+      "max": 100,
+      "source": "Source: Edelman/LinkedIn, 2026 B2B Thought Leadership Impact Report",
+      "alt": "59% of final decision-makers say weak thought leadership helped remove a vendor from consideration; 48% say it shaped their initial shortlist. Source: Edelman/LinkedIn."
+    },
+    {
+      "type": "people",
+      "after_heading": "The AI paradox: more automation, less tolerance for generic content",
+      "count": 8.4,
+      "in_label": "Use AI to evaluate",
+      "out_label": "Don't",
+      "meta": "Vendor evaluation",
+      "headline": "84% of buyers now use AI to summarise vendor content",
+      "source": "Source: Edelman/LinkedIn, 2026 B2B Thought Leadership Impact Report",
+      "alt": "84% of B2B buyers used an AI tool to summarise a vendor's thought leadership during evaluation. Source: Edelman/LinkedIn."
+    },
+    {
+      "type": "quote",
+      "after_heading": "Why buyers still want a human behind the thinking",
+      "mode": "person",
+      "name": "Victoria Whitney",
+      "role": "VP of Corporate Communications, Ecolab",
+      "text": "In an AI-driven world, information is everywhere. Credible insight grounded in real expertise carries greater weight.",
+      "meta": "On AI and credibility",
+      "source": "Source: Edelman/LinkedIn, 2026 B2B Thought Leadership Impact Report",
+      "alt": "Victoria Whitney, VP of Corporate Communications at Ecolab, says credible insight grounded in real expertise carries more weight in an AI-driven world. Source: Edelman/LinkedIn."
+    },
+    {
+      "type": "framework",
+      "after_heading": "What this means for your team's content, starting this week",
+      "meta": "The weekly system",
+      "headline": "Four moves backed by the data above",
+      "items": [
+        {"title": "Name one problem", "text": "Write to one buyer's specific challenge, not the market."},
+        {"title": "Name the person", "text": "A signed stance beats unsigned brand copy."},
+        {"title": "Fewer, sharper pieces", "text": "One piece a month that earns a share beats a weekly rehash."},
+        {"title": "Keep going post-sale", "text": "7 in 10 buyers say it matters more after they've bought."}
+      ],
+      "source": "Source: Edelman/LinkedIn, 2026 B2B Thought Leadership Impact Report",
+      "alt": "Four content moves backed by the Edelman/LinkedIn 2026 report: name one problem, name the person, write fewer sharper pieces, and keep going after the sale."
+    }
+  ]
+}

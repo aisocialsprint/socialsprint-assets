@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "82% of B2B decision-makers say thought leadership is becoming more valuable as AI floods content with generic material. Source: Edelman/LinkedIn 2026 B2B Thought Leadership Impact Report.",
+    "bytes": 80708
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "59% of final decision-makers say weak thought leadership helped remove a vendor from consideration; 48% say it shaped their initial shortlist. Source: Edelman/LinkedIn.",
+    "after_heading": "What the Edelman and LinkedIn report actually found",
+    "bytes": 33426
+  },
+  {
+    "kind": "people",
+    "file": "02-people.webp",
+    "alt": "84% of B2B buyers used an AI tool to summarise a vendor's thought leadership during evaluation. Source: Edelman/LinkedIn.",
+    "after_heading": "The AI paradox: more automation, less tolerance for generic content",
+    "bytes": 42662
+  },
+  {
+    "kind": "quote",
+    "file": "03-quote.webp",
+    "alt": "Victoria Whitney, VP of Corporate Communications at Ecolab, says credible insight grounded in real expertise carries more weight in an AI-driven world. Source: Edelman/LinkedIn.",
+    "after_heading": "Why buyers still want a human behind the thinking",
+    "bytes": 44826
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "Four content moves backed by the Edelman/LinkedIn 2026 report: name one problem, name the person, write fewer sharper pieces, and keep going after the sale.",
+    "after_heading": "What this means for your team's content, starting this week",
+    "bytes": 59250
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]
