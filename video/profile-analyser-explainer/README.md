@@ -30,7 +30,7 @@ Same hook, timings, music and CTA as variant A; only the product shots change, s
 | `RealUITall` | `renders/profile-analyser-30s-realui-9x16.mp4` (+ `-silent`) |
 
 - Intro and step 1 use real 3x captures of socialsprint.co/profile-analyzer (`public/real/`, made by `npm run capture:ui`, which types into the real input frame by frame and never submits the form).
-- Step 1 types at a human pace (about 7 keys a second, short pauses after `.` and `/`); one keystroke sound per character from the same schedule. Step 1 is 1 s longer than in A and step 3 1 s shorter; all cuts stay on the beat.
+- Step 1 types at a human pace (about 10 keys a second, short pauses after `.` and `/`); one keystroke sound per character from the same schedule. Scene timings match variant A.
 - Step 2 rebuilds Andrea's real report (checked 21 Nov 2026) in the site's UI style (Inter, same colours, labels and layout) so text stays sharp when zoomed: score 73 Strong and the four pillars, with Best practices turning amber under a "Biggest room to grow" label.
 - Step 3 reuses variant A's design, filled with Andrea's real findings ("Headline foregrounds Pelion's offer over Andrea's" plus two more places he loses impact).
 - Source: `src/RealUI.tsx`. Re-run the capture if the landing page changes.

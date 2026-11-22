@@ -19,8 +19,8 @@ const UI = {
 };
 const OFFWHITE = '#F5F7FB';
 const AMBER_T = '#FEF3C7';
-// Variant B gives step 1 an extra second for human-paced typing and takes it from step 3 (all cuts stay on the beat).
-const SB = { ...S, score: S.score + 30, fix: S.fix + 30 };
+// Variant B uses the same scene timings as variant A.
+const SB = { ...S };
 
 // Andrea's real report, 21 Nov 2026 (from the screenshots supplied)
 const REPORT = {
@@ -81,13 +81,13 @@ const RealIntro: React.FC = () => {
 };
 
 // ---------- step 1: real input, typed for real ----------
-// Human-paced typing: about 7 keys a second, with short pauses after '.' and '/'. Frame of each keystroke:
+// Human-paced typing: about 10 keys a second, with short pauses after '.' and '/'. Frame of each keystroke:
 const KEY_FRAMES = (() => {
-  const gaps = [4, 3, 5, 4, 3, 4, 5, 3];
+  const gaps = [3, 2, 3, 3, 2, 3, 3, 2];
   let t = 8; const out: number[] = [];
   for (let i = 0; i < URL_TEXT.length; i++) {
     out.push(t);
-    t += gaps[i % gaps.length] + ('./'.includes(URL_TEXT[i]) ? 6 : 0);
+    t += gaps[i % gaps.length] + ('./'.includes(URL_TEXT[i]) ? 3 : 0);
   }
   return out;
 })();
