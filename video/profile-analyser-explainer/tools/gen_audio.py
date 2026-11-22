@@ -123,15 +123,26 @@ os.remove(os.path.join(OUT, 'music.wav'))
 def pop():
     tt = t_(0.12); f = 380 + 600 * np.exp(-tt * 45)
     return np.sin(2 * np.pi * np.cumsum(f) / SR) * env_ad(len(tt), 0.002, 0.03)
-def key():
+def _snap():  # short noise transient, used for the UI button click
     n = rng.standard_normal(int(0.03 * SR)); x = n - onepole_lp(n, 2000); x = onepole_lp(x, 6000)
     return x * env_ad(len(x), 0.0005, 0.004)
+def keystroke(body_hz, click_hz, up_delay):
+    """Mechanical keyboard key: sharp switch click + low 'thock' from the keycap + softer key-up click."""
+    tt = t_(0.14); x = np.zeros(len(tt))
+    n = rng.standard_normal(len(tt))
+    click_ = (n - onepole_lp(n, click_hz)) * env_ad(len(tt), 0.0002, 0.0025)
+    thock = np.sin(2 * np.pi * body_hz * tt) * env_ad(len(tt), 0.0008, 0.012)
+    m = rng.standard_normal(len(tt)); knock = (onepole_lp(m, 1400) - onepole_lp(m, 500)) * env_ad(len(tt), 0.0005, 0.009) * 3
+    x += click_ + 0.9 * thock + knock
+    i = int(up_delay * SR); u = rng.standard_normal(len(tt) - i)
+    x[i:] += 0.35 * (u - onepole_lp(u, 2500)) * env_ad(len(u), 0.0002, 0.002)
+    return x
+def click():
+    a = _snap() * 1.2; b = _snap(); x = np.zeros(int(0.08 * SR)); x[:len(a)] += a; x[int(0.03 * SR):int(0.03 * SR) + len(b)] += 0.7 * b
+    return x
 def tick():
     tt = t_(0.15); f = 1320
     return (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * 2 * f * tt)) * env_ad(len(tt), 0.001, 0.03)
-def click():
-    a = key() * 1.2; b = key(); x = np.zeros(int(0.08 * SR)); x[:len(a)] += a; x[int(0.03 * SR):int(0.03 * SR) + len(b)] += 0.7 * b
-    return x
 def whoosh():
     tt = t_(0.5); n = rng.standard_normal(len(tt)); x = n - onepole_lp(n, 600); x = onepole_lp(x, 3500)
     return x * np.sin(np.pi * tt / 0.5) ** 2
@@ -152,7 +163,9 @@ def shimmer():
         x[i:] += np.sin(2 * np.pi * mtof(m) * u) * np.exp(-u * 5)
     return x
 
-for name, fn in [('pop', pop), ('key', key), ('tick', tick), ('click', click), ('whoosh', whoosh),
+for k, (bh, ch, up) in enumerate(((210, 3200, 0.075), (190, 2800, 0.085), (235, 3600, 0.07), (200, 3000, 0.09))):
+    write_wav(f'key{k + 1}.wav', keystroke(bh, ch, up))
+for name, fn in [('pop', pop), ('tick', tick), ('click', click), ('whoosh', whoosh),
                  ('rise', rise), ('chime', chime), ('shimmer', shimmer)]:
     write_wav(f'{name}.wav', fn())
 print('ok', sorted(os.listdir(OUT)))

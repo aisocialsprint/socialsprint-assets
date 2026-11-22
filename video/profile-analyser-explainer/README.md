@@ -12,7 +12,7 @@
 ## Storyboard
 | time | scene | copy |
 |---|---|---|
-| 0:00 | Hook | Buyers check your profile first. Small gaps quietly cost you replies. |
+| 0:00 | Hook | People check your profile first. Small gaps quietly cost you replies. |
 | 0:05 | Intro | SocialSprint Profile Analyser: a free score out of 100. |
 | 0:08 | Step 1 | Add your LinkedIn profile (URL typed, sections ticked off). |
 | 0:12.5 | Step 2 | Get your score out of 100 (gauge counts to 73, four pillars fill). |

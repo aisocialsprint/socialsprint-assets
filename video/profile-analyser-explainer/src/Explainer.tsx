@@ -143,7 +143,7 @@ const Gaps: React.FC = () => {
   return (
     <Layout
       copy={<>
-        <Meta color={AMBER}>Buyers check your profile first</Meta>
+        <Meta color={AMBER}>People check your profile first</Meta>
         <Headline lines={['Small gaps', 'quietly cost', 'you replies.']} accent={2} accentColor={AMBER} />
         <Sub delay={30}>And they are hard to spot from the inside.</Sub>
       </>}
@@ -182,12 +182,14 @@ const Intro: React.FC = () => {
 };
 
 const URL_TEXT = 'linkedin.com/in/your-name';
+// typing runs from TYPE[0] to TYPE[1] (frames into the scene); one keystroke sound per character
+const TYPE = [8, 50];
 const ITEMS = ['Headline', 'About', 'Experience', 'Skills', 'Activity'];
 const AddProfile: React.FC = () => {
   const f = useCurrentFrame();
-  const chars = Math.floor(interpolate(f, [10, 42], [0, URL_TEXT.length], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
-  const press = f >= 48 && f < 56 ? 0.95 : 1;
-  const scan = ease(f, 58, 118);
+  const chars = Math.floor(interpolate(f, TYPE, [0, URL_TEXT.length], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
+  const press = f >= 54 && f < 62 ? 0.95 : 1;
+  const scan = ease(f, 64, 124);
   const caret = Math.floor(f / 15) % 2 === 0 && chars < URL_TEXT.length;
   return (
     <Layout
@@ -211,7 +213,7 @@ const AddProfile: React.FC = () => {
           <div style={{ position: 'absolute', left: 40, top: 92, width: 660 * scan, height: 10, borderRadius: 5, background: BLUE }} />
           {ITEMS.map((it, i) => {
             const done = scan > (i + 1) / (ITEMS.length + 0.5);
-            const o = ease(f, 54 + i * 5, 64 + i * 5);
+            const o = ease(f, 58 + i * 5, 68 + i * 5);
             return <div key={it} style={{ opacity: o, display: 'flex', alignItems: 'center', gap: 22, height: 74, borderBottom: i < ITEMS.length - 1 ? `2px solid ${TRACK}` : 'none' }}>
               <div style={{ width: 44, height: 44, borderRadius: 22, background: done ? GREEN : TRACK, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {done && <svg width="24" height="24" viewBox="0 0 24 24"><path d="M5 12.5 L10 17 L19 7" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" /></svg>}
@@ -340,7 +342,7 @@ const Cta: React.FC = () => {
           Score my profile free
           <svg width="44" height="30" viewBox="0 0 44 30"><path d="M2 15 H40 M28 3 L40 15 L28 27" fill="none" stroke={BLUE} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></svg>
         </div>
-        <div style={{ position: 'absolute', left: tall ? 440 : 380, top: 60, width: 40, height: 40, marginLeft: -20, marginTop: -20, borderRadius: 20, border: '4px solid #fff', opacity: 1 - ripple, transform: `scale(${1 + ripple * 3})` }} />
+        <div style={{ position: 'absolute', left: tall ? 440 : 380, top: 60, width: 40, height: 40, marginLeft: -20, marginTop: -20, borderRadius: 20, border: `4px solid ${BLUE}`, opacity: f < 112 ? 0 : 1 - ripple, transform: `scale(${1 + ripple * 3})` }} />
         <svg style={{ position: 'absolute', left: interpolate(cur, [0, 1], [tall ? 760 : 700, tall ? 430 : 370]), top: interpolate(cur, [0, 1], [tall ? 260 : 230, 50]), opacity: ease(f, 60, 72) }} width="54" height="64" viewBox="0 0 27 32">
           <path d="M2 2 L2 26 L8.5 20 L13 30 L17 28 L12.5 18.5 L21 18.5 Z" fill={DARK} stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
         </svg>
@@ -372,10 +374,10 @@ const CUES: [number, string, number, number][] = [
   [S.intro - 8, 'whoosh', 0.35, 1],
   // step 1: typing, button, one tick per section read
   ...Array.from({ length: URL_TEXT.length }, (_, i): [number, string, number, number] =>
-    [S.add + Math.ceil(10 + (32 * (i + 1)) / URL_TEXT.length), 'key', 0.22, 0.85 + ((i * 7) % 5) * 0.08]),
-  [S.add + 48, 'click', 0.5, 1],
+    [S.add + Math.ceil(TYPE[0] + ((TYPE[1] - TYPE[0]) * (i + 1)) / URL_TEXT.length), `key${(i * 3) % 4 + 1}`, 0.45, 0.96 + ((i * 7) % 5) * 0.02]),
+  [S.add + 54, 'click', 0.5, 1],
   ...ITEMS.map((_, i): [number, string, number, number] =>
-    [S.add + firstFrame(58, 135, (f) => ease(f, 58, 118) > (i + 1) / (ITEMS.length + 0.5)), 'tick', 0.32, 1 + i * 0.06]),
+    [S.add + firstFrame(64, 135, (f) => ease(f, 64, 124) > (i + 1) / (ITEMS.length + 0.5)), 'tick', 0.32, 1 + i * 0.06]),
   // step 2: count-up, band badge, pillar bars, weakest pillar
   [S.score - 4, 'whoosh', 0.2, 1.2],
   [S.score + 12, 'rise', 0.22, 1],
