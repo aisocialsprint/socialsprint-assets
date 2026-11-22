@@ -114,7 +114,7 @@ const SECTIONS = [
   { key: 'Headline', y: 286 }, { key: 'About', y: 400 }, { key: 'Experience', y: 524 }, { key: 'Activity', y: 648 },
 ];
 const ProfileMock: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
-  <Card style={{ left: 90, top: 40, width: 640, height: 740, overflow: 'hidden' }}>
+  <Card style={{ left: 90, top: 30, width: 640, height: 774, overflow: 'hidden' }}>
     <div style={{ height: 150, background: `linear-gradient(120deg, ${BLUE_L}, ${BLUE_T})` }} />
     <div style={{ position: 'absolute', left: 44, top: 90, width: 128, height: 128, borderRadius: 64, background: '#CBD5E1', border: '6px solid #fff', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', left: 36, top: 22, width: 44, height: 44, borderRadius: 22, background: '#94A3B8' }} />
@@ -124,7 +124,7 @@ const ProfileMock: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
     <div style={{ position: 'absolute', left: 44, top: SECTIONS[0].y }}><Bar w={420} /><Bar w={300} style={{ marginTop: 12 }} /></div>
     {SECTIONS.slice(1).map((s) => (
       <div key={s.key} style={{ position: 'absolute', left: 44, top: s.y, width: 552 }}>
-        <div style={{ fontFamily: P, fontWeight: 700, fontSize: 24, color: DARK, marginBottom: 14 }}>{s.key}</div>
+        <div style={{ fontFamily: P, fontWeight: 700, fontSize: 24, lineHeight: '30px', color: DARK, marginBottom: 14 }}>{s.key}</div>
         <Bar w={520} /><Bar w={380} style={{ marginTop: 12 }} />
       </div>
     ))}
@@ -133,10 +133,14 @@ const ProfileMock: React.FC<{ children?: React.ReactNode }> = ({ children }) => 
 );
 
 // ---------- scenes ----------
+// Outline boxes are measured from the mock's geometry (card coordinates):
+// headline block = two 16px bars + 12px gap (44px); a titled section = 30px title + 14px gap + 44px of bars (88px).
+const PAD = 12, HEADLINE_H = 44, SECTION_H = 88, CARD_TOP = 30, PILL_H = 60;
+const gapBox = (y: number, h: number) => ({ top: y - PAD, h: h + 2 * PAD });
 const GAPS = [
-  { label: 'Vague headline', y: SECTIONS[0].y + 6, at: 24 },
-  { label: 'Thin About section', y: SECTIONS[1].y + 30, at: 40 },
-  { label: 'No recent posts', y: SECTIONS[3].y + 30, at: 56 },
+  { label: 'Vague headline', ...gapBox(SECTIONS[0].y, HEADLINE_H), at: 24 },
+  { label: 'Thin About section', ...gapBox(SECTIONS[1].y, SECTION_H), at: 40 },
+  { label: 'No recent posts', ...gapBox(SECTIONS[3].y, SECTION_H), at: 56 },
 ];
 const Gaps: React.FC = () => {
   const f = useCurrentFrame();
@@ -151,12 +155,12 @@ const Gaps: React.FC = () => {
         <ProfileMock>
           {GAPS.map((g) => {
             const o = ease(f, g.at, g.at + 12);
-            return <div key={g.label} style={{ position: 'absolute', left: 30, top: g.y - 14, width: 580, height: 70, borderRadius: 14, border: `4px dashed ${AMBER}`, opacity: o * (0.7 + 0.3 * Math.sin(f / 6)) }} />;
+            return <div key={g.label} style={{ position: 'absolute', left: 44 - PAD - 2, top: g.top, width: 520 + 2 * PAD + 4, height: g.h, borderRadius: 14, boxSizing: 'border-box', border: `4px dashed ${AMBER}`, opacity: o * (0.7 + 0.3 * Math.sin(f / 6)) }} />;
           })}
         </ProfileMock>
         {GAPS.map((g) => {
           const s = spring({ frame: f - g.at - 6, fps: FPS, config: { damping: 12 } });
-          return <div key={g.label} style={{ position: 'absolute', left: 470, top: g.y + 30, transform: `scale(${s})`, transformOrigin: 'left center', display: 'flex', alignItems: 'center', gap: 12, background: AMBER_T, border: `3px solid ${AMBER}`, borderRadius: 40, padding: '10px 24px', fontFamily: I, fontWeight: 600, fontSize: 28, color: '#92400E', whiteSpace: 'nowrap', boxShadow: '0 10px 24px rgba(217,119,6,.2)' }}>
+          return <div key={g.label} style={{ position: 'absolute', left: 470, top: CARD_TOP + g.top + g.h / 2 - PILL_H / 2, height: PILL_H, boxSizing: 'border-box', transform: `scale(${s})`, transformOrigin: 'left center', display: 'flex', alignItems: 'center', gap: 12, background: AMBER_T, border: `3px solid ${AMBER}`, borderRadius: 40, padding: '10px 24px', fontFamily: I, fontWeight: 600, fontSize: 28, color: '#92400E', whiteSpace: 'nowrap', boxShadow: '0 10px 24px rgba(217,119,6,.2)' }}>
             <span style={{ fontFamily: P, fontWeight: 900, fontSize: 30 }}>!</span>{g.label}
           </div>;
         })}
