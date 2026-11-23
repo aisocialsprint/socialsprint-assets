@@ -1,0 +1,59 @@
+{
+ "slug": "linkedin-verification-b2b-sales-reps",
+ "title": "LinkedIn Verification: What B2B Sales Reps Should Know",
+ "hero": {
+   "metaphor": "compare",
+   "rows": [["Dec 2025", 100], ["Sep 2026", 115]],
+   "value": "115M",
+   "label": "LinkedIn members now verified",
+   "alt": "LinkedIn verified members grew from 100 million in December 2025 to 115 million by September 2026. Source: TechCrunch."
+ },
+ "visuals": [
+   {
+     "type": "big_stat",
+     "after_heading": "What \"Verified on LinkedIn\" Actually Checks",
+     "meta": "Platform scale",
+     "value": "115M",
+     "line": "members now carry LinkedIn's verification badge",
+     "chips": ["700,000+ companies", "Up from 100M in Dec 2025"],
+     "source": "Source: TechCrunch, September 2026",
+     "alt": "115 million LinkedIn members and over 700,000 companies are now verified, up from 100 million in December 2025. Source: TechCrunch."
+   },
+   {
+     "type": "bars",
+     "after_heading": "The Numbers Behind the Badge",
+     "meta": "Verification method breakdown",
+     "headline": "How verified members proved it",
+     "rows": [["Workplace (company email)", 60], ["Government ID", 27]],
+     "max": 100,
+     "source": "Source: TechCrunch, September 2026",
+     "alt": "About 60% of verified LinkedIn members confirmed a workplace by company email, and 27% verified a government ID. Source: TechCrunch."
+   },
+   {
+     "type": "framework",
+     "after_heading": "How the New Vouching Feature Works",
+     "meta": "Who can vouch for you",
+     "headline": "3 requirements to vouch",
+     "items": [
+       {"title": "Verified profile", "text": "The voucher must already be verified themselves"},
+       {"title": "1-year connection", "text": "Connected to you for 12 months or more"},
+       {"title": "2FA enabled", "text": "Two-factor authentication on their account"}
+     ],
+     "source": "Source: TechCrunch, September 2026",
+     "alt": "LinkedIn requires a voucher to have a verified profile, a year-long connection, and two-factor authentication enabled. Source: TechCrunch."
+   },
+   {
+     "type": "checklist",
+     "after_heading": "Is It Worth It for a B2B Sales Team",
+     "meta": "Rollout checklist",
+     "headline": "Adding verification to onboarding",
+     "items": [
+       ["Confirm workplace verification", "Company email, in week one"],
+       ["Ask a colleague to vouch", "Needs a verified, 1-year connection"],
+       ["Pair the badge with a strong profile", "Headline and About still do the work"]
+     ],
+     "cta": "More breakdowns like this: socialsprint.co/resources",
+     "alt": "A three-step checklist for rolling LinkedIn verification into sales rep onboarding."
+   }
+ ]
+}

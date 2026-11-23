@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "LinkedIn verified members grew from 100 million in December 2025 to 115 million by September 2026. Source: TechCrunch.",
+    "bytes": 58266
+  },
+  {
+    "kind": "big_stat",
+    "file": "01-big_stat.webp",
+    "alt": "115 million LinkedIn members and over 700,000 companies are now verified, up from 100 million in December 2025. Source: TechCrunch.",
+    "after_heading": "What \"Verified on LinkedIn\" Actually Checks",
+    "bytes": 26280
+  },
+  {
+    "kind": "bars",
+    "file": "02-bars.webp",
+    "alt": "About 60% of verified LinkedIn members confirmed a workplace by company email, and 27% verified a government ID. Source: TechCrunch.",
+    "after_heading": "The Numbers Behind the Badge",
+    "bytes": 27642
+  },
+  {
+    "kind": "framework",
+    "file": "03-framework.webp",
+    "alt": "LinkedIn requires a voucher to have a verified profile, a year-long connection, and two-factor authentication enabled. Source: TechCrunch.",
+    "after_heading": "How the New Vouching Feature Works",
+    "bytes": 39296
+  },
+  {
+    "kind": "checklist",
+    "file": "04-checklist.webp",
+    "alt": "A three-step checklist for rolling LinkedIn verification into sales rep onboarding.",
+    "after_heading": "Is It Worth It for a B2B Sales Team",
+    "bytes": 45722
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]
