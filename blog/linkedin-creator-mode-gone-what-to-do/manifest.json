@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "LinkedIn newsletter subscriptions grew 150% year on year in 2026, the platform's fastest growing content format. Source: Digital Applied.",
+    "bytes": 55885
+  },
+  {
+    "kind": "framework",
+    "file": "01-framework.webp",
+    "alt": "LinkedIn removed profile hashtags in February 2024 and the Creator Mode toggle in March 2024; the rest of its features now ship to every profile by default. Source: Social Media Today.",
+    "after_heading": "What LinkedIn Removed, and What It Kept",
+    "bytes": 43268
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "LinkedIn newsletter subscriptions grew 150% year on year in 2026, the platform's fastest growing content format. Source: Digital Applied.",
+    "after_heading": "Newsletters Are the One Feature Worth Running in 2026",
+    "bytes": 32716
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "A four-item checklist for B2B sellers: Featured section, custom profile URL, primary button, and one steady posting cadence.",
+    "after_heading": "A Five-Minute Profile Checklist for B2B Sellers",
+    "bytes": 52704
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

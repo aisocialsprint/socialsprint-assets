@@ -1,0 +1,50 @@
+{
+ "slug": "linkedin-creator-mode-gone-what-to-do",
+ "title": "LinkedIn Creator Mode is gone: what to do now",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [["2025 baseline", 100], ["2026 subscribers", 250]],
+  "value": "150%",
+  "label": "newsletter subscriber growth",
+  "alt": "LinkedIn newsletter subscriptions grew 150% year on year in 2026, the platform's fastest growing content format. Source: Digital Applied."
+ },
+ "visuals": [
+  {
+   "type": "framework",
+   "after_heading": "What LinkedIn Removed, and What It Kept",
+   "meta": "Timeline",
+   "headline": "Two changes, then everything else stayed",
+   "items": [
+    {"title": "Feb 2024", "text": "Profile hashtags removed platform-wide, no replacement."},
+    {"title": "Mar 2024", "text": "Creator Mode on/off toggle removed for good."},
+    {"title": "Now", "text": "Featured, analytics, Live, Audio Events and Newsletters ship to everyone by default."}
+   ],
+   "source": "Source: Social Media Today",
+   "alt": "LinkedIn removed profile hashtags in February 2024 and the Creator Mode toggle in March 2024; the rest of its features now ship to every profile by default. Source: Social Media Today."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "Newsletters Are the One Feature Worth Running in 2026",
+   "meta": "Fastest growing format",
+   "value": "150%",
+   "line": "LinkedIn newsletter subscriptions grew 150% year on year in 2026.",
+   "chips": ["Newsletters", "Fastest-growing format"],
+   "source": "Source: Digital Applied, 2026 LinkedIn statistics report",
+   "alt": "LinkedIn newsletter subscriptions grew 150% year on year in 2026, the platform's fastest growing content format. Source: Digital Applied."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "A Five-Minute Profile Checklist for B2B Sellers",
+   "meta": "Do this today",
+   "headline": "Four things to check now Creator Mode is gone",
+   "items": [
+    ["Featured section", "Pin one case study or one piece of original analysis"],
+    ["Custom profile URL", "Shorten it to your name under Edit public profile"],
+    ["Primary button", "Know whether your profile shows Connect or Follow"],
+    ["One steady cadence", "A newsletter or weekly posts, not both half-heartedly"]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "A four-item checklist for B2B sellers: Featured section, custom profile URL, primary button, and one steady posting cadence."
+  }
+ ]
+}
