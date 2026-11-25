@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "All-Star LinkedIn profiles are cited as roughly 40 times more likely to be contacted than incomplete ones. Source: The Muse, citing LinkedIn data.",
+    "bytes": 55557
+  },
+  {
+    "kind": "framework",
+    "file": "01-framework.webp",
+    "alt": "Three common reasons B2B sellers never reach LinkedIn All-Star status: profiles set up once and never revisited, missing summaries, and abandoned skills sections.",
+    "after_heading": "Why so many B2B sellers stall below All-Star",
+    "bytes": 41684
+  },
+  {
+    "kind": "people",
+    "file": "02-people.webp",
+    "alt": "About 51% of LinkedIn members have a fully completed profile. Source: The Muse, citing LinkedIn data.",
+    "after_heading": "The visibility cost of an incomplete profile",
+    "bytes": 35550
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "A four-step checklist for sales managers to get a team to LinkedIn All-Star status: list the team, self-check, flag gaps, set a deadline.",
+    "after_heading": "A 15-minute fix any sales manager can run this week",
+    "bytes": 40486
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]
