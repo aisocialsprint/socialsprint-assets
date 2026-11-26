@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "LinkedIn posts with a link earned 13.6% more interactions than posts without one, per Metricool's analysis of 577,000 posts.",
+    "bytes": 70651
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Posts with a link earned 13.57% more interactions and 4.90% more views than posts without one. Source: Metricool, via Search Engine Journal.",
+    "after_heading": "What Metricool's data actually found",
+    "bytes": 28074
+  },
+  {
+    "kind": "quote",
+    "file": "02-quote.webp",
+    "alt": "A sample of 577,000 posts is large enough that a 13.57% engagement gap is unlikely to be noise.",
+    "after_heading": "Why everyone believed links killed reach",
+    "bytes": 35696
+  },
+  {
+    "kind": "checklist",
+    "file": "03-checklist.webp",
+    "alt": "A four-item checklist for posting links on LinkedIn: drop the first-comment default, keep format strategy first, treat benchmarks as directional, review clicks weekly.",
+    "after_heading": "What this means for your posting checklist",
+    "bytes": 58420
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "A four-step framework for posting links on LinkedIn: lead with the value, state it in two lines, let the link follow, match format to goal.",
+    "after_heading": "How to use links without losing reach",
+    "bytes": 57428
+  },
+  {
+    "kind": "big_stat",
+    "file": "05-big_stat.webp",
+    "alt": "Carousels reached 45.85% engagement, the highest of any format in Metricool's dataset of 577,000 LinkedIn posts.",
+    "after_heading": "What this means for a sales team's weekly routine",
+    "bytes": 36900
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "slug": "linkedin-posts-with-links-engagement-2026",
+  "title": "LinkedIn posts with links get 13.6% more engagement",
+  "hero": {
+    "metaphor": "waffle",
+    "pct": 13.6,
+    "caption": "more interactions when a link is included",
+    "value": "13.6%",
+    "label": "more interactions with a link in the post",
+    "alt": "LinkedIn posts with a link earned 13.6% more interactions than posts without one, per Metricool's analysis of 577,000 posts."
+  },
+  "visuals": [
+    {
+      "type": "bars",
+      "after_heading": "What Metricool's data actually found",
+      "meta": "577,000 LinkedIn company posts",
+      "headline": "Links outperformed no-link posts",
+      "rows": [["More views", 4.90], ["More interactions", 13.57]],
+      "max": 16,
+      "highlight": "max",
+      "source": "Source: Metricool, via Search Engine Journal",
+      "alt": "Posts with a link earned 13.57% more interactions and 4.90% more views than posts without one. Source: Metricool, via Search Engine Journal."
+    },
+    {
+      "type": "quote",
+      "after_heading": "Why everyone believed links killed reach",
+      "mode": "none",
+      "meta": "Key idea",
+      "text": "Metricool's 577,000-post sample is large enough that the 13.57% gap is unlikely to be noise.",
+      "source": "Source: Metricool, via Search Engine Journal",
+      "alt": "A sample of 577,000 posts is large enough that a 13.57% engagement gap is unlikely to be noise."
+    },
+    {
+      "type": "checklist",
+      "after_heading": "What this means for your posting checklist",
+      "meta": "Posting checklist",
+      "headline": "Four changes worth making now",
+      "items": [
+        ["Drop the first-comment default", "Put the link where readers can see it."],
+        ["Keep format strategy first", "Carousels led engagement at 45.85% in the same dataset."],
+        ["Treat the numbers as directional", "Company page benchmarks will not map exactly to one account."],
+        ["Review clicks weekly", "A short Monday check beats watching engagement rate alone."]
+      ],
+      "cta": "More breakdowns like this: socialsprint.co/resources",
+      "alt": "A four-item checklist for posting links on LinkedIn: drop the first-comment default, keep format strategy first, treat benchmarks as directional, review clicks weekly."
+    },
+    {
+      "type": "framework",
+      "after_heading": "How to use links without losing reach",
+      "meta": "How to post a link",
+      "headline": "Four steps before you hit publish",
+      "items": [
+        {"title": "Lead with the value", "text": "Give the reader a reason to click before the link appears."},
+        {"title": "State it in two lines", "text": "Say what the post is about in the first two lines."},
+        {"title": "Let the link follow", "text": "Add the link naturally, not as an afterthought."},
+        {"title": "Match format to goal", "text": "Reach goals need a carousel or video. A specific action needs a direct link."}
+      ],
+      "source": "Source: Metricool, via Search Engine Journal and Influencer Marketing Hub",
+      "alt": "A four-step framework for posting links on LinkedIn: lead with the value, state it in two lines, let the link follow, match format to goal."
+    },
+    {
+      "type": "big_stat",
+      "after_heading": "What this means for a sales team's weekly routine",
+      "meta": "Same dataset",
+      "value": "45.85%",
+      "line": "Carousels still lead every format measured in Metricool's dataset, ahead of any link post.",
+      "chips": ["Carousels", "577,000 posts", "48,000 pages"],
+      "source": "Source: Metricool, via Influencer Marketing Hub",
+      "alt": "Carousels reached 45.85% engagement, the highest of any format in Metricool's dataset of 577,000 LinkedIn posts."
+    }
+  ]
+}
