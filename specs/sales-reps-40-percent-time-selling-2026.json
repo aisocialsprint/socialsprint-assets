@@ -1,0 +1,59 @@
+{
+ "slug": "sales-reps-40-percent-time-selling-2026",
+ "title": "Sales reps spend just 40% of their time selling",
+ "hero": {
+   "metaphor": "waffle",
+   "pct": 40,
+   "caption": "Average seller, 2026",
+   "value": "40%",
+   "label": "of the week spent selling",
+   "alt": "The average sales rep spends 40% of their week selling. Source: Salesforce, State of Sales report, 2026."
+ },
+ "visuals": [
+   {
+     "type": "bars",
+     "after_heading": "What the data actually shows",
+     "meta": "2026 survey of 4,050 sales pros",
+     "headline": "Selling time, by seller group",
+     "rows": [["Average seller", 40], ["Gen Z reps", 35]],
+     "max": 100,
+     "source": "Source: Salesforce, State of Sales report, 2026",
+     "alt": "Average sellers spend 40% of their week selling; Gen Z reps spend only 35%. Source: Salesforce, State of Sales report, 2026."
+   },
+   {
+     "type": "big_stat",
+     "after_heading": "Where the other 60% goes",
+     "meta": "Where the time goes",
+     "value": "60%",
+     "line": "of the average rep's week is non-selling work",
+     "chips": ["Data entry", "Prospecting admin", "Quote creation", "Account planning"],
+     "source": "Source: Salesforce, State of Sales report, 2026",
+     "alt": "60% of the average sales rep's week goes to non-selling work: data entry, prospecting admin, quote creation and account planning. Source: Salesforce, State of Sales report, 2026."
+   },
+   {
+     "type": "people",
+     "after_heading": "AI is expected to help, but adoption alone won't fix it",
+     "meta": "2026 Salesforce survey",
+     "headline": "Most sales orgs have already adopted AI",
+     "count": 8.7,
+     "in_label": "Use AI",
+     "out_label": "No AI yet",
+     "source": "Source: Salesforce, State of Sales report, 2026",
+     "alt": "87% of sales organisations now use some form of AI. Source: Salesforce, State of Sales report, 2026."
+   },
+   {
+     "type": "framework",
+     "after_heading": "The fix is a system, not more hustle",
+     "meta": "A manager's starting point",
+     "headline": "A simple weekly system",
+     "items": [
+       {"title": "Block selling time", "text": "Book prospecting and LinkedIn time before the week fills up."},
+       {"title": "Weekly scorecard", "text": "Track selling activity next to pipeline movement, visible to the team."},
+       {"title": "Monday 15-min review", "text": "Check who posted, who followed up, and what worked."},
+       {"title": "Batch the admin", "text": "Fix a window for CRM updates so it doesn't fragment selling time."}
+     ],
+     "source": "Source: SocialSprint analysis",
+     "alt": "A four-step weekly system for protecting selling time: block selling time, run a weekly scorecard, hold a 15-minute Monday review, and batch admin work."
+   }
+ ]
+}

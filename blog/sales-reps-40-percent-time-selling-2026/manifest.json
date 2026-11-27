@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "waffle",
+    "file": "hero.jpg",
+    "alt": "The average sales rep spends 40% of their week selling. Source: Salesforce, State of Sales report, 2026.",
+    "bytes": 67353
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "Average sellers spend 40% of their week selling; Gen Z reps spend only 35%. Source: Salesforce, State of Sales report, 2026.",
+    "after_heading": "What the data actually shows",
+    "bytes": 26462
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "60% of the average sales rep's week goes to non-selling work: data entry, prospecting admin, quote creation and account planning. Source: Salesforce, State of Sales report, 2026.",
+    "after_heading": "Where the other 60% goes",
+    "bytes": 32540
+  },
+  {
+    "kind": "people",
+    "file": "03-people.webp",
+    "alt": "87% of sales organisations now use some form of AI. Source: Salesforce, State of Sales report, 2026.",
+    "after_heading": "AI is expected to help, but adoption alone won't fix it",
+    "bytes": 37978
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "A four-step weekly system for protecting selling time: block selling time, run a weekly scorecard, hold a 15-minute Monday review, and batch admin work.",
+    "after_heading": "The fix is a system, not more hustle",
+    "bytes": 57184
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]
