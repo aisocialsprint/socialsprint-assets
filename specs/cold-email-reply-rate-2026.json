@@ -1,0 +1,74 @@
+{
+ "title": "Cold email reply rates: the real number is 0.45%",
+ "hero": {
+  "metaphor": "compare",
+  "rows": [["Cold email", 0.45], ["LinkedIn outreach", 12.2]],
+  "value": "27x",
+  "label": "more replies than cold email",
+  "alt": "Cold email gets a 0.45% reply rate versus 12.2% for LinkedIn Messenger outreach, about 27 times higher. Source: Belkins, 2026."
+ },
+ "visuals": [
+  {
+   "type": "bars",
+   "after_heading": "The real cold email reply rate is 0.45%, not 8.5%",
+   "meta": "Belkins 2026 State of B2B Outreach",
+   "headline": "The quoted number vs the real one",
+   "rows": [
+    ["Commonly quoted (opens-based)", 8.5, "8.5%"],
+    ["Real rate, H1 2025 (sent-based)", 0.45, "0.45%"],
+    ["Real rate, H2 2025 (sent-based)", 0.40, "0.40%"]
+   ],
+   "max": 10,
+   "source": "Source: Belkins, State of B2B Outreach 2026",
+   "alt": "The commonly quoted 8.5% cold email reply rate versus the real sent-basis rate of 0.45% in H1 2025 and 0.40% in H2 2025. Source: Belkins."
+  },
+  {
+   "type": "big_stat",
+   "after_heading": "LinkedIn outreach beats cold email by roughly 27 times",
+   "meta": "Same strict method, both channels",
+   "value": "27x",
+   "line": "LinkedIn Messenger outreach reply rate versus cold email's",
+   "chips": ["12.2% LinkedIn", "0.45% cold email"],
+   "source": "Source: Belkins, LinkedIn outreach study, 2026",
+   "alt": "LinkedIn Messenger outreach lands a 12.2% reply rate versus cold email's 0.45%, about 27 times higher. Source: Belkins."
+  },
+  {
+   "type": "quote",
+   "after_heading": "Why the 8.5% figure refuses to die",
+   "mode": "none",
+   "meta": "Key idea",
+   "text": "Divide by opens and a reply rate flatters you. Divide by sends and it tells you the truth.",
+   "source": "Source: SocialSprint analysis",
+   "alt": "Key idea: dividing replies by opens flatters a reply rate, dividing by total sent tells the truth."
+  },
+  {
+   "type": "framework",
+   "after_heading": "A worked example: rebuilding your reply-rate math",
+   "meta": "Four steps",
+   "headline": "Rebuild your reply-rate math",
+   "items": [
+    {"title": "Pull raw counts", "text": "Get total sent and total replies per channel, not opens"},
+    {"title": "Divide by sends", "text": "Replies divided by total sent, never by opens"},
+    {"title": "Repeat per channel", "text": "Same sent-basis calculation for email, LinkedIn, calling"},
+    {"title": "Compare like for like", "text": "Only compare rates that use the same denominator"}
+   ],
+   "source": "Source: SocialSprint analysis",
+   "alt": "Four steps to rebuild reply-rate math: pull raw counts, divide by sends not opens, repeat per channel, compare like for like."
+  },
+  {
+   "type": "checklist",
+   "after_heading": "What this means for your 2026 outbound mix",
+   "meta": "Before next quarter's plan",
+   "headline": "Fix your outbound targets",
+   "items": [
+    ["Re-baseline email targets", "Plan around 0.40-0.45%, not 8.5%"],
+    ["Weight LinkedIn in forecasts", "Treat Messenger replies as primary pipeline"],
+    ["Pair channels, don't silo them", "Email, LinkedIn and calling reinforce each other"],
+    ["Audit every reply-rate number", "Confirm the denominator before using it"]
+   ],
+   "cta": "More breakdowns like this: socialsprint.co/resources",
+   "alt": "Checklist for 2026 outbound targets: re-baseline email targets, weight LinkedIn in forecasts, pair channels, audit every reply-rate number."
+  }
+ ],
+ "slug": "cold-email-reply-rate-2026"
+}

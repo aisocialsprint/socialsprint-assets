@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "hero",
+    "metaphor": "compare",
+    "file": "hero.jpg",
+    "alt": "Cold email gets a 0.45% reply rate versus 12.2% for LinkedIn Messenger outreach, about 27 times higher. Source: Belkins, 2026.",
+    "bytes": 52103
+  },
+  {
+    "kind": "bars",
+    "file": "01-bars.webp",
+    "alt": "The commonly quoted 8.5% cold email reply rate versus the real sent-basis rate of 0.45% in H1 2025 and 0.40% in H2 2025. Source: Belkins.",
+    "after_heading": "The real cold email reply rate is 0.45%, not 8.5%",
+    "bytes": 35454
+  },
+  {
+    "kind": "big_stat",
+    "file": "02-big_stat.webp",
+    "alt": "LinkedIn Messenger outreach lands a 12.2% reply rate versus cold email's 0.45%, about 27 times higher. Source: Belkins.",
+    "after_heading": "LinkedIn outreach beats cold email by roughly 27 times",
+    "bytes": 29182
+  },
+  {
+    "kind": "quote",
+    "file": "03-quote.webp",
+    "alt": "Key idea: dividing replies by opens flatters a reply rate, dividing by total sent tells the truth.",
+    "after_heading": "Why the 8.5% figure refuses to die",
+    "bytes": 32324
+  },
+  {
+    "kind": "framework",
+    "file": "04-framework.webp",
+    "alt": "Four steps to rebuild reply-rate math: pull raw counts, divide by sends not opens, repeat per channel, compare like for like.",
+    "after_heading": "A worked example: rebuilding your reply-rate math",
+    "bytes": 49498
+  },
+  {
+    "kind": "checklist",
+    "file": "05-checklist.webp",
+    "alt": "Checklist for 2026 outbound targets: re-baseline email targets, weight LinkedIn in forecasts, pair channels, audit every reply-rate number.",
+    "after_heading": "What this means for your 2026 outbound mix",
+    "bytes": 53896
+  },
+  {
+    "kind": "analyser",
+    "file": "zz-analyser.webp",
+    "link": "https://socialsprint.co/profile-analyzer",
+    "alt": "LinkedIn profile score of 73 out of 100. Score your own profile free with the SocialSprint Profile Analyser.",
+    "after_heading": "__END__",
+    "bytes": 63758
+  }
+]
